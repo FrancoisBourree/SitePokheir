@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>Pok'Heir Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Liens JavaScript -->
+
+<script src="/javascript/chrono.js"></script>
+
+<!-- Liens CSS -->
+
+<link rel="stylesheet" type="text/css" href="/css/chrono.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head><link rel="icon" type="image/ico" href="/img/pique.ico" /></head>
+
+<div th:replace="~{fragment::style5}"></div>
+
+<body>
+
+<div th:replace="~{fragment::navbar}"></div>
+
+<!-- Container (About Section) -->
+<div class="w3-container w3-padding-64 w3-center" id="about">
+    <h3 style="text-decoration: underline">Tournoi en cours</h3>
+    <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
+
+    <!-- Chrono -->
+    <h1>Chronomètre</h1>
+    <div id="clockdiv">
+        <div>
+            <span class="days"></span>
+            <div class="smalltext">Jours</div>
+        </div>
+        <div>
+            <span class="hours"></span>
+            <div class="smalltext">Heures</div>
+        </div>
+        <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Secondes</div>
+        </div>
+    </div>
+
+
+    <div class="w3-row"> </div>
+</div>
+
+
+
+<div th:replace="~{fragment::script}"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+CREATE TABLE articles (
+  idArticle INT NOT NULL AUTO_INCREMENT,
+  titre VARCHAR(42) NOT NULL,
+  image VARCHAR(100) NOT NULL,
+  texte VARCHAR(1000) NOT NULL,
+  PRIMARY KEY (idArticle)
+)

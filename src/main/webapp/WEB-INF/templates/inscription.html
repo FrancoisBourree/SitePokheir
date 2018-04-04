@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Titre de l'onglet -->
+<head>
+    <title>POK'HEIR - Inscription</title>
+    <div th:replace="~{fragment::css}"></div>
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" type="image/ico" href="/img/pique.ico">
+</head>
+
+<style>
+
+    body,h1,h2,h3,h4,h5,h6 {
+        font-family: "Lato", sans-serif;
+    }
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+        background-color: black;
+        background-image: url(../img/login.jpg);
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .w3-wide {
+        letter-spacing: 10px;
+    }
+    .w3-hover-opacity {
+        cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            background-attachment: scroll;
+        }
+    }
+</style>
+
+<body>
+
+<!-- Fragment HTML barre navigation non connecté -->
+
+<div th:replace="~{fragment::navbar}"></div>
+
+<!-- Formulaire d'enregistrement de l'utilisateur -->
+
+<div class="w3-container w3-content w3-round-xlarge w3-display-middle w3-white w3-center w3-display-middle w3-mobile w3-hide-large w3-hide-medium"
+     style="top: 50%;padding-top: 300px;padding-bottom: 50px;">
+
+    <div class="w3-margin-top">
+        <img src="img/logo3.png" width="300px" ></img>
+        <div class="login">
+            <form method="post">
+
+                    <div class="input-label"><label for="id_username">Nom:</label></div></br>
+                    <div><input class="w3-border w3-round-large" required id="id_nom" maxlength="30" name="nom" type="text" style="width:100%;height:40px;padding-left: 5px;"/></div></br>
+
+                    <div class="input-label"><label>Prénom:</label></div></br>
+                    <div><input class="w3-border w3-round-large" required id="id_prenom" maxlength="75" name="prenom" type="text" style="width:100%;height:40px;padding-left: 5px;"/></div></br>
+
+
+                    <div class="input-label"><label>Classe (ex: H44):</label></div></br>
+                    <div><input class="w3-border w3-round-large" required id="id_classe" maxlength="75" name="classe" type="text" style="width:100%;height:40px;padding-left: 5px;"
+                        pattern="H[0-9]{2,}"/></div></br>
+
+                    <div class="input-label"><label>Email:</label></div></br>
+                    <div><input class="w3-border w3-round-large" required id="id_username" maxlength="50" name="email" type="text"
+                        pattern="[A-Za-z0-9._%+-]{3,}@hei.yncrea.fr" style="width:100%;height:40px;padding-left: 5px;"/></div></br>
+
+                    <div class="input-label"><label>Mot de Passe:</label></div></br>
+                    <div><input class="w3-border w3-round-large" required id="id_password" name="password" type="password" style="width:100%;height:40px;padding-left: 5px;"/></div></br>
+
+                <input class="w3-btn w3-amber w3-round-xxlarge" type="submit" value="VALIDER" /></br>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="w3-container w3-content w3-round-xlarge w3-display-middle w3-white w3-center w3-display-middle w3-hide-small"
+     style="margin-top:100px;margin-bottom:100px;padding-bottom:32px;padding-left:120px;padding-right:120px;">
+
+    <div class="w3-margin-top">
+        <img src="img/logo3.png" width="300px" ></img></br>
+        <div class="login"></br>
+            <form method="post"></br>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Name is required">
+                    <input class="input100" type="text" name="nom" placeholder="Nom" style="background-color: lightgray">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+                </div></br>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Firstname is required">
+                    <input class="input100" type="text" name="prenom" placeholder="Prénom" style="background-color: lightgray">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+                </div></br>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Classe is required">
+                    <input class="input100" type="text" name="classe" placeholder="Classe (ex: H44)" pattern="H[0-9]{2,}" style="background-color: lightgray">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+                </div></br>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Email is required">
+                    <input class="input100" type="text" name="email" placeholder="Email HEI" pattern="[A-Za-z0-9._%+-]{3,}@hei.yncrea.fr" style="background-color: lightgray">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+                </div></br>
+
+                <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+                    <input class="input100" type="password" name="password" placeholder="Password" style="background-color: lightgray">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+                    </span>
+                </div></br></br>
+
+                <div class="container-login100-form-btn p-t-10"></br>
+                    <input class="w3-button w3-black w3-round-xxlarge" type="submit" value="VALIDER" style="margin-bottom:50px;padding-left: 110px;padding-right: 110px;"/></br>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div th:replace="~{fragment::script}"></div>
+
+</body>
+</html>

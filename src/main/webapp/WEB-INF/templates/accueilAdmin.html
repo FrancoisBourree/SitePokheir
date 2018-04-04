@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>AccueilAdmin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Liens CSS -->
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head><link rel="icon" type="image/ico" href="/img/pique.ico" /></head>
+
+<!-- Fragment CSS en tête -->
+
+<div th:replace="~{fragment::style2}"></div>
+
+<body>
+
+<!-- Fragment HTML barre de navigation -->
+
+<div th:replace="~{fragment::navbar3}"></div>
+
+<div class="w3-content w3-container w3-center w3-white w3-display-middle w3-mobile w3-hide-large w3-hide-medium" style="padding-bottom:100px;padding-top: 100px;margin-top: 260px;">
+
+    <h1 class="w3-blue" style="padding-top: 50px"> ADMINISTRATION DES ARTICLES</h1></br>
+
+    <form method="post" action="addarticle" >
+        <h3 class="w3-amber"> Ajout d'un article </h3>
+
+        <p>Titre :</p>
+        <input class="w3-border w3-input" id="id_titre" type="text" name="titre" style="width:100%;"></br>
+
+        <p>Texte de l'article :</p>
+        <textarea class="w3-border w3-input" cols="25" rows="7" id="id_texte1" name="texte" style="width:100%;"></textarea>
+        <br/>
+
+        <p> Image :</p>
+        <a id="test_btn" href="javascript:openPicker()" class="w3-button w3-gray">Ajouter une image</a> </br>
+
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="VALIDER" style="margin-bottom: 20px;width: 234px;"></br>
+        </br>
+    </form></br>
+
+    <form method="post" action="delarticle">
+        <h3 class="w3-amber"> Suppression d'article </h3></br>
+        <select id="selection w3-select" name="id-Article">
+            <option> Selection de l'article à supprimer</option>
+            <option name="option" th:each="article : ${articleList}"
+                   th:text="${article.titre}"
+                   th:value="${article.idArticle}">
+            </option>
+        </select></br>
+    </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="SUPPRIMER" style="margin-bottom: 20px;width: 234px;"></br>
+</form>
+</div>
+
+<div class="w3-content w3-container w3-center w3-white w3-hide-small" style="margin-top: 100px;padding-bottom:50px;margin-bottom: 200px;">
+
+    <h1 class="w3-blue" style="padding-top: 50px"> ADMINISTRATION DES ARTICLES</h1></br>
+
+    <form method="post" action="addarticle" >
+        <h3 class="w3-amber"> Ajout d'un article </h3>
+
+        <p>Titre :</p>
+        <input id="titre" type="text" name="titre" style="width:400px;"></br>
+
+        <p>Texte de l'article :</p>
+        <textarea cols="25" rows="7" id="texte" name="texte" style="width:400px;"></textarea>
+        <br/>
+
+        <p> Image :</p>
+        <a id="test_btn" href="javascript:openPicker()" class="w3-button w3-gray">Ajouter une image</a> </br>
+        <input id="image" name="image" type="hidden" value="raté" href="javascript:openPicker()">
+
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="VALIDER" style="margin-bottom: 20px;width: 234px;"></br>
+
+        </br>
+    </form></br>
+
+    <form method="post" action="delarticle">
+        <h3 class="w3-amber"> Suppression d'article </h3></br>
+        <select id="w3-select" name="id-Article">
+            <option> Selection de l'article à supprimer</option>
+            <option name="option" th:each="article : ${articleList}"
+                    th:text="${article.titre}"
+                    th:value="${article.idArticle}">
+            </option>
+        </select></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="SUPPRIMER" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+</div>
+
+<div th:replace="~{fragment::script}"></div>
+
+<script src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script type="text/javascript">
+    var fsClient = filestack.init('ATCEDtS0aSHWTnb68NcaBz');
+    const link = document.getElementById('image');
+    function openPicker() {
+        fsClient.pick({
+            fromSources:["local_file_system"],
+            lang:"fr",
+            maxFiles:1,
+            transformations:{
+                crop:{      force:true,
+                    aspectRatio:1.778}}
+        }).then(function(response) {
+            const fileUrl = response.filesUploaded[0].url;
+            link.value=fileUrl;
+        });
+    }
+
+</script>
+
+
+</body>
+</html>

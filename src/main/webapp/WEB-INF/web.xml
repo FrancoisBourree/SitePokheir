@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- La page de bienvenue est la servlet "accueil" -->
+    <welcome-file-list>
+        <welcome-file>accueil</welcome-file>
+    </welcome-file-list>
+
+    <!-- 1er filtre : identification -->
+    <filter>
+        <filter-name>AuthentificationFiltre</filter-name>
+        <filter-class>devweb.filtres.AuthentificationFiltre</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthentificationFiltre</filter-name>
+        <url-pattern>/compte</url-pattern>
+        <url-pattern>/deconnexion</url-pattern>
+        <url-pattern>/accueil2</url-pattern>
+        <url-pattern>/compteadmin</url-pattern>
+        <url-pattern>/accueiladmin</url-pattern>
+        <url-pattern>/tournoiAdmin</url-pattern>
+
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>devweb.filtres.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- 2ème filtre : admin -->
+    <filter>
+        <filter-name>AuthentificationAdmin</filter-name>
+        <filter-class>devweb.filtres.AuthentificationAdmin</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthentificationAdmin</filter-name>
+        <url-pattern>/compte</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>FilterAdmin</filter-name>
+        <filter-class>devweb.filtres.FilterAdmin</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FilterAdmin</filter-name>
+        <url-pattern>/compteadmin</url-pattern>
+        <url-pattern>/accueiladmin</url-pattern>
+
+    </filter-mapping>
+
+
+</web-app>

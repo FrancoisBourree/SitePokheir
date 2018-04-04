@@ -1,0 +1,297 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+
+<!-- Fragment CSS lien CSS -->
+
+<div th:fragment="css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Liens CSS -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</div>
+
+<!-- Fragment CSS en tête -->
+
+<div th:fragment="style">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        .login {
+            box-sizing: none;
+        }
+    </style>
+</div>
+
+<!-- Fragment CSS en tête image -->
+
+<div th:fragment="style2">
+    <style>
+
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Lato", sans-serif;
+        }
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+            background-image: url('img/poker2.jpg');
+            min-height: 100%;
+        }
+
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+        #class{
+            margin-top: 100px;
+            padding: 60px 200px 60px 200px;
+            width: 100%;
+        }
+
+        #regle{
+            margin-top: 100px;
+            padding: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</div>
+
+<!-- Fragment CSS gif -->
+
+<div th:fragment="style3">
+    <style>
+
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Lato", sans-serif;
+        }
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4{
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('img/poker.gif');
+            min-height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        /* Second image (Portfolio) */
+        .bgimg-2 {
+            background-image: url("img/poker3.jpg");
+            min-height: 400px;
+        }
+
+        /* Third image (Contact) */
+        .bgimg-3 {
+            background-image: url("img/poker2.jpg");
+            min-height: 400px;
+        }
+
+        /* Fourth image (About) */
+        .bgimg-4 {
+            background-image: url("img/poker4.jpg");
+            min-height: 400px;
+        }
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</div>
+
+<!-- Fragment CSS image en attente -->
+
+<div th:fragment="style4">
+    <style>
+
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Lato", sans-serif;
+        }
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+            background-image: url("img/code.jpg");
+            min-height: 100%;
+        }
+
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+        #class{
+            margin-top: 100px;
+            padding: 60px 200px 60px 200px;
+            width: 100%;
+        }
+
+        #regle{
+            margin-top: 100px;
+            padding: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</div>
+
+<!-- Fragment CSS en tête image tournoi -->
+
+<div th:fragment="style5">
+    <style>
+
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Lato", sans-serif;
+        }
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+            background-image: url('img/tournoi.jpg');
+            min-height: 100%;
+        }
+
+        .w3-wide {letter-spacing: 10px;}
+        .w3-hover-opacity {cursor: pointer;}
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+        #class{
+            margin-top: 100px;
+            padding: 60px 200px 60px 200px;
+            width: 100%;
+        }
+
+        #regle{
+            margin-top: 100px;
+            padding: 100px;
+            margin-bottom: 100px;
+        }
+    </style>
+</div>
+
+<!-- Fragment HTML barre navigation non connecté -->
+
+<div th:fragment="navbar">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-show w3-card w3-animate-top w3-white" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="accueil#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="accueil#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> INFOS</a>
+            <a href="accueil#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="classement" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-line-chart"></i> CLASSEMENT</a>
+            <a href="tournois" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-star"></i> TOURNOIS</a>
+            <a href="accueil#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="register" class="w3-bar-item w3-button w3-right w3-hide-small"><i class="fas fa-arrow-alt-circle-right"></i> S'ENREGISTRER</a>
+            <a href="login" class="w3-bar-item w3-button w3-right w3-hide-small"><i class="fa fa-id-badge"></i> CONNEXION</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="accueil#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">INFOS</a>
+            <a href="accueil#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="classement" class="w3-bar-item w3-button" onclick="toggleFunction()">CLASSEMENT</a>
+            <a href="tournois" class="w3-bar-item w3-button" onclick="toggleFunction()">TOURNOIS</a>
+            <a href="accueil#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="login" class="w3-bar-item w3-button" onclick="toggleFunction()">CONNEXION</a>
+            <a href="register" class="w3-bar-item w3-button" onclick="toggleFunction()">S'ENREGISTRER</a>
+        </div>
+    </div>
+</div>
+
+<!-- Fragment HTML barre navigation connecté -->
+
+<div th:fragment="navbar3">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-show w3-card w3-animate-top w3-white" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="accueil2#home" class="w3-bar-item w3-button">HOME</a>
+            <a href="accueil2#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> INFOS</a>
+            <a href="accueil2#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+            <a href="classement2" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-line-chart"></i> CLASSEMENT</a>
+            <a href="tournois2" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-star"></i> TOURNOIS</a>
+            <a href="accueil2#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+            <a href="deconnexion" class="w3-bar-item w3-button w3-right w3-hide-small"><i class="fa fa-power-off"></i> DECONNEXION</a>
+            <a href="compte" class="w3-bar-item w3-button w3-right w3-hide-small"><i class="fa fa-user"></i> MON COMPTE</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="accueil2#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+            <a href="accueil2#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">INFOS</a>
+            <a href="classement2" class="w3-bar-item w3-button" onclick="toggleFunction()">CLASSEMENT</a>
+            <a href="tournois2" class="w3-bar-item w3-button" onclick="toggleFunction()">TOURNOIS</a>
+            <a href="accueil2#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+            <a href="compte" class="w3-bar-item w3-button" onclick="toggleFunction()">COMPTE</a>
+            <a href="deconnexion" class="w3-bar-item w3-button" onclick="toggleFunction()">DECONNEXION</a>
+        </div>
+    </div>
+</div>
+
+<!-- Fragment SCRIPT bascule menu en bouton pour petit écran -->
+
+<div th:fragment="script">
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+</div>
+
+</body>
+</html>

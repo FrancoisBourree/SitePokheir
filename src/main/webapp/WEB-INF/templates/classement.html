@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<title>Classement</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Liens CSS -->
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head><link rel="icon" type="image/ico" href="/img/pique.ico"/></head>
+
+<!-- Fragment CSS en tête image -->
+
+<div th:replace="~{fragment::style2}"></div>
+
+<body>
+
+<!-- Fragment HTML barre navigation non connecte -->
+
+<div th:replace="~{fragment::navbar}"></div>
+
+<!-- Classement grand écran -->
+
+<div class="w3-content w3-container w3-white w3-center w3-mobile w3-hide-large w3-hide-medium w3-round-large" style="padding-bottom:30px;padding-top:30px;margin-top: 100px;" >
+
+  <h1 class="w3-black w3-center w3-round-xlarge" >Classement des joueurs</h1>
+  <p>Voici les classements des membres de l'association lors des différents tournois:</p>
+
+  <table class="w3-content w3-table w3-table-hover">
+    <thead>
+    <tr>
+      <th class="w3-center">Prénom</th>
+      <th class="w3-center">Nom</th>
+      <th class="w3-center">Points</th>
+      <th class="w3-center">Parties Gagnées</th>
+      <th class="w3-center">Parties Jouées</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="membre : ${membresList}">
+      <td class="w3-center" th:text="${membre.nom}">John</td>
+      <td class="w3-center" th:text="${membre.prenom}">Doe</td>
+      <td class="w3-center" th:text="${membre.nbPoints}">1500</td>
+      <td class="w3-center" th:text="${membre.partiesGagnees}">15</td>
+      <td class="w3-center" th:text="${membre.partiesJouees}">30</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Classement petit écran -->
+
+<div class="w3-content w3-container w3-white w3-center w3-mobile w3-hide-small w3-round-large" style="margin-top: 100px;padding:60px 200px 60px 200px;" >
+
+  <h1 class="w3-black w3-center w3-round-xlarge" >Classement des joueurs</h1>
+  <p>Voici les classements des membres de l'association lors des différents tournois:</p>
+
+  <table class="w3-content w3-table w3-table-hover">
+    <thead>
+    <tr>
+      <th class="w3-center">Prénom</th>
+      <th class="w3-center">Nom</th>
+      <th class="w3-center">Points</th>
+      <th class="w3-center">Parties Gagnées</th>
+      <th class="w3-center">Parties Jouées</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="membre : ${membresList}">
+      <td class="w3-center" th:text="${membre.nom}">John</td>
+      <td class="w3-center" th:text="${membre.prenom}">Doe</td>
+      <td class="w3-center" th:text="${membre.nbPoints}">1500</td>
+      <td class="w3-center" th:text="${membre.partiesGagnees}">15</td>
+      <td class="w3-center" th:text="${membre.partiesJouees}">30</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<!-- Règles grand écran -->
+
+<div class="w3-container w3-content w3-center w3-white w3-mobile w3-hide-large w3-hide-medium w3-round-large" style="margin-top: 100px;margin-bottom: 100px;padding-bottom:30px;padding-top:30px;">
+<h1 class="w3-center w3-black w3-round-xlarge"> Règles des tournois </h1>
+</br>
+<p><b>Voici les règles des tournois de l'association :</b> <p>
+<p>Les règles de poker qui seront appliquées aux tournois seront celles du <a href="https://www.winamax.fr/texas-hold-em-no-limit">Texas Hold’em No Limit.</a></p>
+<p>Les joueurs pourront intégrer le tournoi lors des 90 premières minutes.</p>
+<p>Lors du début du tournoi, chaque joueur possèdera la même somme jetons, qui sera normalement fixée à 1 500.</p>
+<p>Pour aider les joueurs à situer leur classement, nous relèverons à chaque changement de table le classement par table des joueurs.</p>
+<p>Le premier se verra attribuer 10 pts.</p>
+<p>Le second 8 pts. Le troisième 6 pts. Le quatrième 4 pts. Le cinquième 2 pts.Etc... (En fonction du nombre de personne par table) </p>
+<p>Les dix premières places seront gagnantes.</p>
+<p>Les lots seront affichés sur la page d'accueil du site</p>
+<p>Soyez fairplay, et surtout amusez-vous !</p>
+</div>
+
+<!-- Règles petit écran -->
+
+<div class="w3-container w3-content w3-center w3-white w3-hide-small w3-round-large" style="margin-top: 100px;margin-bottom: 100px;padding:60px 200px 60px 200px;" >
+  <h1 class="w3-center w3-black w3-round-xlarge"> Règles des tournois </h1>
+  </br>
+  <p> <b> Voici les règles des tournois de l'association : </b><p>
+  <div align="justify">
+  <p>Les règles de poker qui seront appliquées aux tournois seront celles du </br> <a href="https://www.winamax.fr/texas-hold-em-no-limit">Texas Hold’em No Limit.</a></p>
+  <p>Les joueurs pourront intégrer le tournoi lors des 90 premières minutes.</p>
+  <p>Lors du début du tournoi, chaque joueur possèdera la même somme jetons, qui sera normalement fixée à 1 500.</p>
+  <p>Pour aider les joueurs à situer leur classement, nous relèverons à chaque changement de table le classement par table des joueurs.</p>
+  <p>Le premier se verra attribuer 10 pts.</p>
+  <p>Le second 8 pts. Le troisième 6 pts. Le quatrième 4 pts. Le cinquième 2 pts.Etc... (En fonction du nombre de personne par table) </p>
+  <p>Les dix premières places seront gagnantes.</p>
+  <p>Les lots seront affichés sur la page d'accueil du site</p>
+  <p>Soyez fairplay, et surtout amusez-vous !</p>
+</div>
+</div>
+
+<!-- Fragment SCRIPT bascule menu en bouton pour petit écran -->
+
+<div th:replace="~{fragment::script}"></div>
+
+</body>
+
+</html>
