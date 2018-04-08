@@ -15,7 +15,7 @@ public class AuthentificationAdmin implements Filter{
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
-        String identifiant = (String) httpRequest.getSession().getAttribute("utilisateurConnecte");
+        String identifiant = (String) httpRequest.getSession().getAttribute("utilisateurConnecte"); // récupère "utilisateurConnecte" de la session sous le nom "identifiant"
         System.out.println(identifiant);
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
