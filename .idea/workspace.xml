@@ -35,41 +35,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="compte.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConnexionServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="58" />
+            <state relative-caret-position="119">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="ArticleDaoTestCase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/impl/ArticleDaoTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            <state relative-caret-position="-489">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding>
+                <marker date="1522856392390" expanded="true" signature="770:790" ph="DELETE FROM articles... " />
+                <marker date="1522856392390" expanded="true" signature="830:935" ph="INSERT INTO articles... " />
+                <marker date="1522856392390" expanded="true" signature="975:1082" ph="INSERT INTO articles... " />
+                <marker date="1522856392390" expanded="true" signature="1122:1227" ph="INSERT INTO articles... " />
+                <marker date="1522856392390" expanded="true" signature="2350:2398" ph="SELECT * FRO... articles" />
+                <marker date="1522856392390" expanded="true" signature="3231:3269" ph="DELETE FROM articles... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MembreDaoTestCase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/impl/MembreDaoTestCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding>
+                <marker date="1523231836719" expanded="true" signature="782:800" ph="DELETE FROM membre... " />
+                <marker date="1523231836719" expanded="true" signature="836:918" ph="INSERT INTO membre... " />
+                <marker date="1523231836719" expanded="true" signature="954:1046" ph="INSERT INTO membre... " />
+                <marker date="1523231836719" expanded="true" signature="1082:1162" ph="INSERT INTO membre... " />
+                <marker date="1523231836719" expanded="true" signature="1198:1295" ph="INSERT INTO membre... " />
+                <marker date="1523231836719" expanded="true" signature="2898:3067" ph="SELECT * FRO... membre" />
+                <marker date="1523231836719" expanded="true" signature="4038:4075" ph="DELETE FROM membre... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthentificationFiltre.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationFiltre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/GenericServlet.java">
+      <file leaf-file-name="AuthentificationAdmin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterAdmin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/FilterAdmin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -78,36 +113,19 @@
       <file leaf-file-name="AccueilAdminServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AccueilAdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="357">
+              <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccueilServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/AccueilServlet.java">
+      <file leaf-file-name="AddArticleServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddArticleServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/fragment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="218" column="32" lean-forward="true" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="32" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -127,16 +145,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeconnexionServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/DeconnexionServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -191,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index2.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/classement.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/classement2.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/compte.html" />
@@ -242,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/GenericServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html" />
+        <option value="$PROJECT_DIR$/src/test/java/impl/MembreDaoTestCase.java" />
       </list>
     </option>
   </component>
@@ -332,15 +340,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="devweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pokheir" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SitePokheir" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="devweb" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pokheir" type="b2602c69:ProjectViewProjectNode" />
@@ -514,7 +513,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Serveur Pok'heir">
+  <component name="RunManager" selected="JUnit.MembreDaoTestCase.shouldDeleteMembre">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -625,6 +624,31 @@
       <option name="MAIN_CLASS_NAME" value="impl.MembreDaoTestCase" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="MembreDaoTestCase.shouldDeleteMembre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="IDEA" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="impl" />
+      <option name="MAIN_CLASS_NAME" value="impl.MembreDaoTestCase" />
+      <option name="METHOD_NAME" value="shouldDeleteMembre" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -771,19 +795,21 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Serveur Pok'heir" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.MembreDaoTestCase" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldAddArticle" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldDelArticle" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.MembreDaoTestCase.shouldDeleteMembre" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldDelArticle" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldAddArticle" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MembreDaoTestCase" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MembreDaoTestCase.shouldDeleteMembre" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MembreDaoTestCase" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldDelArticle" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ArticleDaoTestCase.shouldAddArticle" />
       </list>
     </recent_temporary>
   </component>
@@ -862,20 +888,11 @@
       <workItem from="1522961690730" duration="1453000" />
       <workItem from="1523045181391" duration="1762000" />
       <workItem from="1523144169359" duration="5111000" />
-      <workItem from="1523191092173" duration="22519000" />
+      <workItem from="1523191092173" duration="23351000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArticleDaoTestCase - 2018.02.05 at 16h 30m 26s.xml">
-      <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTestCase - 2018.02.05 at 16h 31m 30s.xml">
-      <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArticleDaoTestCase - 2018.02.05 at 16h 32m 07s.xml">
-      <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArticleDaoTestCase - 2018.02.05 at 16h 33m 11s.xml">
       <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
     </history-entry>
@@ -891,15 +908,24 @@
     <history-entry file="ArticleDaoTestCase - 2018.04.05 at 22h 57m 17s.xml">
       <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArticleDaoTestCase - 2018.04.09 at 01h 55m 03s.xml">
+      <configuration name="ArticleDaoTestCase" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ArticleDaoTestCase_shouldAddArticle - 2018.02.05 at 16h 34m 56s.xml">
       <configuration name="ArticleDaoTestCase.shouldAddArticle" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ArticleDaoTestCase_shouldDelArticle - 2018.02.05 at 16h 35m 07s.xml">
       <configuration name="ArticleDaoTestCase.shouldDelArticle" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MembreDaoTestCase - 2018.04.09 at 01h 55m 16s.xml">
+      <configuration name="MembreDaoTestCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MembreDaoTestCase_shouldDeleteMembre - 2018.04.09 at 01h 57m 18s.xml">
+      <configuration name="MembreDaoTestCase.shouldDeleteMembre" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266087000" />
+    <option name="totallyTimeSpent" value="266919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -932,7 +958,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130435" sideWeight="0.4975" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24130435" sideWeight="0.4975" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172706" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -966,22 +992,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/compte.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/AccueilServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/AddArticleServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1208,14 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1264,30 +1266,6 @@
             <marker date="1522856392317" expanded="true" signature="3728:3760" ph="DELETE FROM membre... " />
             <marker date="1522856392317" expanded="true" signature="4199:4236" ph="UPDATE membre... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/FilterAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationFiltre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,14 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/GenericServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1362,10 +1332,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationFiltre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/EncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/FilterAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AccueilAdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="55" />
+        <state relative-caret-position="357">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1380,17 +1398,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="58" />
+        <state relative-caret-position="119">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
+    <entry file="file://$PROJECT_DIR$/src/test/java/impl/ArticleDaoTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="-489">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <marker date="1522856392390" expanded="true" signature="770:790" ph="DELETE FROM articles... " />
+            <marker date="1522856392390" expanded="true" signature="830:935" ph="INSERT INTO articles... " />
+            <marker date="1522856392390" expanded="true" signature="975:1082" ph="INSERT INTO articles... " />
+            <marker date="1522856392390" expanded="true" signature="1122:1227" ph="INSERT INTO articles... " />
+            <marker date="1522856392390" expanded="true" signature="2350:2398" ph="SELECT * FRO... articles" />
+            <marker date="1522856392390" expanded="true" signature="3231:3269" ph="DELETE FROM articles... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/impl/MembreDaoTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <marker date="1523231836719" expanded="true" signature="782:800" ph="DELETE FROM membre... " />
+            <marker date="1523231836719" expanded="true" signature="836:918" ph="INSERT INTO membre... " />
+            <marker date="1523231836719" expanded="true" signature="954:1046" ph="INSERT INTO membre... " />
+            <marker date="1523231836719" expanded="true" signature="1082:1162" ph="INSERT INTO membre... " />
+            <marker date="1523231836719" expanded="true" signature="1198:1295" ph="INSERT INTO membre... " />
+            <marker date="1523231836719" expanded="true" signature="2898:3067" ph="SELECT * FRO... membre" />
+            <marker date="1523231836719" expanded="true" signature="4038:4075" ph="DELETE FROM membre... " />
+          </folding>
         </state>
       </provider>
     </entry>

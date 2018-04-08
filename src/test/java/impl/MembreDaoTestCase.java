@@ -96,7 +96,7 @@ public class MembreDaoTestCase {
 
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              Statement stmt = connection.createStatement()) {
-            stmt.executeUpdate("DELETE FROM articles WHERE email='test' ");
+            stmt.executeUpdate("DELETE FROM membre WHERE email='test' ");
 
         }
     }
