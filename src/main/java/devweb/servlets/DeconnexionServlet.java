@@ -11,6 +11,7 @@ import java.io.IOException;
 public class DeconnexionServlet extends HttpServlet { //crée une servlet
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().removeAttribute("utilisateurConnecte");
         resp.sendRedirect("accueil");

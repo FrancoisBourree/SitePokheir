@@ -17,6 +17,7 @@ public class AddArticleServlet extends HttpServlet{ //crée une servlet generiqu
 
 
     @Override
+    // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String titre = req.getParameter("titre");

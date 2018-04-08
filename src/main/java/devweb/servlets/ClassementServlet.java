@@ -16,6 +16,7 @@ import java.util.List;
 public class ClassementServlet extends GenericServlet { //crée une servlet generique
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
         WebContext context = new WebContext(req, resp, req.getServletContext());

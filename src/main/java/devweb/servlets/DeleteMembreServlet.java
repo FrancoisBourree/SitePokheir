@@ -15,6 +15,7 @@ import java.io.IOException;
 public class DeleteMembreServlet extends GenericServlet { //crée une servlet generique
 
     @Override
+    // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
 

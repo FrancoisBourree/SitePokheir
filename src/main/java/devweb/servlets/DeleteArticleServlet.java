@@ -15,6 +15,7 @@ import java.io.IOException;
     public class DeleteArticleServlet extends HttpServlet { //crée une servlet
 
         @Override
+        // Requête qui permet d'envoyer des infos
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             Integer id = Integer.parseInt(req.getParameter("id-Article"));
 

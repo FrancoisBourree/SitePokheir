@@ -17,6 +17,7 @@ public class InscriptionServlet extends GenericServlet { //crée une servlet gen
 
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String identifiantUtilisateurConnecte = (String) req.getSession().getAttribute("utilisateurConnecte");
         if (identifiantUtilisateurConnecte == null || "".equals(identifiantUtilisateurConnecte)) {
@@ -28,14 +29,15 @@ public class InscriptionServlet extends GenericServlet { //crée une servlet gen
     }
 
     @Override
+    // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String email = req.getParameter("email");
-        String nom = req.getParameter("nom");
-        String prenom = req.getParameter("prenom");
-        String classe = req.getParameter("classe");
-        String mdp = req.getParameter("password");
+        String email = req.getParameter("email"); // récupère "email" du formulaire d'inscription
+        String nom = req.getParameter("nom"); // récupère "nom" du formulaire d'inscription
+        String prenom = req.getParameter("prenom"); // récupère "prenom" du formulaire d'inscription
+        String classe = req.getParameter("classe"); // récupère "classe" du formulaire d'inscription
+        String mdp = req.getParameter("password"); // récupère "mdp" du formulaire d'inscription
         try {
-            MembreLibrary.getInstance().addMembre(email,nom,prenom,classe,mdp);
+            MembreLibrary.getInstance().addMembre(email,nom,prenom,classe,mdp); // Crée une requete SQL grace à la méthode addMembre avec les infos récupérées
         } catch (IllegalArgumentException e) {
             resp.sendRedirect("error");
             showMessageDialog(null,"Erreur d'inscription");

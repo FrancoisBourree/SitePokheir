@@ -14,6 +14,7 @@ import java.io.IOException;
 public class ConnexionServlet extends GenericServlet{ //crée une servlet generique
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
 
@@ -29,6 +30,7 @@ public class ConnexionServlet extends GenericServlet{ //crée une servlet generi
     }
 
     @Override
+    // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String email=req.getParameter("email"); // récupère "email" du formulaire

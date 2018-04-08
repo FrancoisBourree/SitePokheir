@@ -13,6 +13,7 @@ import java.io.IOException;
 public class Tournoi2Servlet extends GenericServlet { //crée une servlet generique
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setCharacterEncoding("UTF-8");

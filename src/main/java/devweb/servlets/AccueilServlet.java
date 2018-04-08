@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 public class AccueilServlet extends GenericServlet { //crée une servlet generique
 
     @Override
+    // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setCharacterEncoding("UTF-8");
