@@ -13,6 +13,7 @@ public class AuthentificationAdmin implements Filter{
     }
 
     @Override
+    // redirige vers "compteadmin" si on va sur "compte" alors qu'on est admin
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String identifiant = (String) httpRequest.getSession().getAttribute("utilisateurConnecte"); // récupère "utilisateurConnecte" de la session sous le nom "identifiant"
@@ -21,7 +22,7 @@ public class AuthentificationAdmin implements Filter{
 
         if(identifiant.equals("admin@hei.yncrea.fr")) {
             System.out.println("Vous etes admin !");
-            httpResponse.sendRedirect("compteadmin");
+            httpResponse.sendRedirect("../compteadmin");
             return;
         }
         chain.doFilter(request, response);

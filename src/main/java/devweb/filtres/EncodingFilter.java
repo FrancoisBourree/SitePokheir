@@ -10,6 +10,7 @@ public class EncodingFilter implements Filter {
     public void destroy() {
     }
 
+    // filtre qui permet de fixer le charset en UTF-8
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         req.setCharacterEncoding(StandardCharsets.UTF_8.displayName());
         resp.setCharacterEncoding(StandardCharsets.UTF_8.displayName());

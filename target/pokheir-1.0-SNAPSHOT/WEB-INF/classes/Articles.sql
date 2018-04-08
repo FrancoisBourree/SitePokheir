@@ -4,4 +4,4 @@ CREATE TABLE articles (
   image VARCHAR(100) NOT NULL,
   texte VARCHAR(1000) NOT NULL,
   PRIMARY KEY (idArticle)
-)
+);

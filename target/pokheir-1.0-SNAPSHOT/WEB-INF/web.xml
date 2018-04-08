@@ -9,22 +9,19 @@
         <welcome-file>accueil</welcome-file>
     </welcome-file-list>
 
-    <!-- 1er filtre : identification -->
+    <!-- 1er filtre : vérifie que l'on est connecté (connecté ou admin) -->
     <filter>
         <filter-name>AuthentificationFiltre</filter-name>
         <filter-class>devweb.filtres.AuthentificationFiltre</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthentificationFiltre</filter-name>
-        <url-pattern>/compte</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/connecte/*</url-pattern>
         <url-pattern>/deconnexion</url-pattern>
-        <url-pattern>/accueil2</url-pattern>
-        <url-pattern>/compteadmin</url-pattern>
-        <url-pattern>/accueiladmin</url-pattern>
-        <url-pattern>/tournoiAdmin</url-pattern>
-
     </filter-mapping>
-    
+
+    <!-- 2ème filtre : caracteres en UTF-8 -->
     <filter>
         <filter-name>EncodingFilter</filter-name>
         <filter-class>devweb.filtres.EncodingFilter</filter-class>
@@ -34,17 +31,17 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!-- 2ème filtre : admin -->
+    <!-- 3ème filtre : admin -->
     <filter>
         <filter-name>AuthentificationAdmin</filter-name>
         <filter-class>devweb.filtres.AuthentificationAdmin</filter-class>
     </filter>
-
     <filter-mapping>
         <filter-name>AuthentificationAdmin</filter-name>
-        <url-pattern>/compte</url-pattern>
+        <url-pattern>/connecte/compte</url-pattern>
     </filter-mapping>
 
+    <!-- 4ème filtre : vérifie que l'on est admin -->
     <filter>
         <filter-name>FilterAdmin</filter-name>
         <filter-class>devweb.filtres.FilterAdmin</filter-class>
@@ -52,8 +49,7 @@
 
     <filter-mapping>
         <filter-name>FilterAdmin</filter-name>
-        <url-pattern>/compteadmin</url-pattern>
-        <url-pattern>/accueiladmin</url-pattern>
+        <url-pattern>/admin/*</url-pattern>
 
     </filter-mapping>
 

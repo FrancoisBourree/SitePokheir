@@ -13,14 +13,16 @@ public class FilterAdmin implements Filter{
     }
 
     @Override
+    // vérifie qu'on est admin
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         String identifiant = (String) httpRequest.getSession().getAttribute("utilisateurConnecte"); // récupère "utilisateurConnecte" de la session sous le nom "identifiant"
+        String mdp = (String) httpRequest.getSession().getAttribute("mdp"); // récupère "mdp" de la session sous le nom "mdp"
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-        if(!identifiant.equals("admin@hei.yncrea.fr")) {
+        if(!identifiant.equals("admin@hei.yncrea.fr") && !mdp.equals("pokheir2018")){ // si pas admin
             System.out.println("Vous n'etes pas admin !");
-            httpResponse.sendRedirect("compte");
+            httpResponse.sendRedirect("../compte"); // renvoie vers compte
             return;
         }
         chain.doFilter(request, response);

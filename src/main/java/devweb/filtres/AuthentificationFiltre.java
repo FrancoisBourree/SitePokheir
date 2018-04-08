@@ -19,7 +19,7 @@ public class AuthentificationFiltre  implements Filter{
         if(identifiant == null || "".equals(identifiant)) { // si pas connecté
             System.out.println("Il faut être connecté pour accéder à cette page !");
             HttpServletResponse httpResponse = (HttpServletResponse) response;
-            httpResponse.sendRedirect("/login"); // redirige vers login
+            httpResponse.sendRedirect("../login"); // redirige vers login
             return;
         }
         chain.doFilter(request, response);

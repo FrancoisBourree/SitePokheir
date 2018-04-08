@@ -14,6 +14,6 @@ public class DeconnexionServlet extends HttpServlet { //crée une servlet
     // Requête qui permet de récupérer des infos
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().removeAttribute("utilisateurConnecte"); // supprime l'attribut en session
-        resp.sendRedirect("accueil"); // renvoie vers l'aacueil
+        resp.sendRedirect("../accueil"); // renvoie vers l'accueil
     }
 }

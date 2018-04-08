@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<title>Mon Compte</title>
+<head><link rel="icon" type="image/ico" href="/img/pique.ico" /></head>
+
+<!-- Fragment CSS lien CSS -->
+
+<div th:replace="~{fragment::css}"></div>
+
+<!-- Fragment CSS en tête image -->
+
+<div th:replace="~{fragment::style2}"></div>
+
+<body>
+
+<!-- Fragment HTML barre navigation connecté -->
+
+<div th:replace="~{fragment::navbar3}"></div>
+
+<!-- Compte grand écran -->
+
+<div class="w3-content w3-container w3-white w3-center w3-display-middle w3-mobile w3-hide-large w3-hide-medium w3-round-large" style="margin-top:50px;padding-top: 150px;padding-bottom: 100px;">
+    <h1 class="w3-black w3-round-xlarge" th:text="${session.utilisateurConnecte}"> MON COMPTE</h1>
+
+    <!-- Modifier mot de passe -->
+
+    <form action="modifmdp" method="post">
+        <h3> Changer de mot de passe:</h3>
+        <p>Nouveau mot de passe :</p>
+        <input class="w3-border w3-input" id="id_password1" type="text" name="password">
+        <input class="w3-btn w3-round-large w3-green w3-center" type="submit" value="Valider" style="margin-bottom: 20px;margin-top: 30px"></br>
+        </br>
+    </form>
+
+    <!-- Inscription tournoi -->
+
+    <form method="post">
+        <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Inscription au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+    </br>
+
+    <!-- Supprimer compte -->
+
+    <form method="post" action="/delcompte">
+        <input class="w3-btn w3-round w3-red w3-center" type="submit" value="Supprimer mon compte" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+</div>
+
+<!-- Compte petit écran -->
+
+<div class="w3-content w3-container w3-white w3-center w3-display-middle w3-hide-small w3-round-large" style="padding-right: 200px;padding-left: 200px;padding-top: 50px;padding-bottom: 30px;">
+    <h1 class="w3-black w3-round-xlarge"> MON COMPTE</h1>
+
+    <!-- Modifier mot de passe -->
+
+    <form action="modifmdp" method="post">
+        <h3> Changer de mot de passe:</h3>
+        <p>Nouveau mot de passe :</p>
+        <input class="w3-border w3-input" id="id_password1" type="text" name="password">
+        <input class="w3-btn w3-round-large w3-green w3-center" type="submit" value="Valider" style="margin-bottom: 20px;margin-top: 30px"></br>
+    </form>
+    </br>
+
+    <!-- Inscription tournoi -->
+
+    <form method="post">
+        <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Inscription au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+    </br>
+
+    <!-- Supprimer compte -->
+
+    <form method="post" action="/delcompte">
+        <input class="w3-btn w3-round w3-red w3-center" type="submit" value="Supprimer mon compte" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+</div>
+
+<!-- Fragment SCRIPT bascule menu en bouton pour petit écran-->
+
+<div th:replace="~{fragment::script}"></div>
+
+</body>
+</html>
