@@ -27,32 +27,14 @@
     <h3 style="text-decoration: underline">Tournoi en cours</h3>
     <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
 
-    <!-- Chrono -->
-    <h1>Chronomètre</h1>
-    <div id="clockdiv">
-        <div>
-            <span class="days"></span>
-            <div class="smalltext">Jours</div>
-        </div>
-        <div>
-            <span class="hours"></span>
-            <div class="smalltext">Heures</div>
-        </div>
-        <div>
-            <span class="minutes"></span>
-            <div class="smalltext">Minutes</div>
-        </div>
-        <div>
-            <span class="seconds"></span>
-            <div class="smalltext">Secondes</div>
-        </div>
-        <div class="container-login100-form-btn p-t-10"></br>
-            <input class="w3-button w3-black w3-round-xxlarge" type="submit" value="RESET" style="margin-bottom:50px;padding-left: 110px;padding-right: 110px;"/></br>
-        </div>
-        <div class="container-login100-form-btn p-t-10"></br>
-            <input class="w3-button w3-black w3-round-xxlarge" type="submit" value="LANCER" style="margin-bottom:5px;padding-left: 110px;padding-right: 110px;"/></br>
-        </div>
-    </div>
+<!-- Chrono -->
+<h1>Chronomètre</h1>
+    <form name="chronoForm">
+        <input type="text" name="chronotime" id="chronotime" value="0:00:00:00"/>
+        <input type="button" name="startstop" value="Start" onClick="chronoStart()" />
+        <input type="button" name="reset" value="Reset" onClick="chronoReset()" />
+    </form>
+
 
 
     <div class="w3-row"> </div>

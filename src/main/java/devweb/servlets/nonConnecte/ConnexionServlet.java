@@ -35,6 +35,8 @@ public class ConnexionServlet extends GenericServlet { //crée une servlet gener
     // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        HttpSession session = req.getSession(); // création de la session
+
         String mdp = req.getParameter("password"); // récupère "password" du questionnaire et le stock dans "mdp"
         req.getSession().setAttribute("mdp", mdp); // crée un attribut "emailConnecte" pour la session avec comme valeur celle de "emailConnexion"
         String email = req.getParameter("email"); // récupère "email" du formulaire et le stock dans "email"
