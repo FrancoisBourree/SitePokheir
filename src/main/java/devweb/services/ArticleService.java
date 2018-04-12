@@ -7,7 +7,6 @@ import java.util.List;
 
 public class ArticleService {
 
-
     private static class ArticleServiceHolder {
         private static ArticleService instance = new ArticleService();
     }

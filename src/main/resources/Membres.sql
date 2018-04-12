@@ -13,6 +13,7 @@ CREATE TABLE membre (
   nbPoints INT NOT NULL,
   partiesGagnees INT NOT NULL,
   partiesJouees INT NOT NULL,
+  participe BOOLEAN,
   PRIMARY KEY (email)
 );
 

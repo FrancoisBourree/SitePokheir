@@ -15,26 +15,50 @@
 <div th:replace="~{fragment::navbar3}"></div>
 
 <div class="w3-content w3-container w3-white w3-center w3-display-middle w3-mobile w3-hide-medium w3-hide-large" style="padding-bottom: 150px;padding-top: 200px">
-    <h1 class="w3-red"> MON COMPTE ADMIN</h1></br>
+    <h1 class="w3-black"> MON COMPTE ADMIN</h1></br>
     <h3>Modification des articles sur la page d'accueil</h3></br>
     <a href="accueiladmin"><btn class="w3-btn w3-round-large w3-amber w3-center" type="submit" style="margin-bottom: 20px"> Gestion de l'accueil </btn>
     </a>
     </br>
-    <h3>Création et organisation de tournoi de poker</h3></br>
+    <h3>Création et organisation de tournoi de poker</h3>
+
+    <form method="post" action="addtounoi" >
+
+        <p>Date :</p>
+        <input class="w3-border w3-input" id="id_titre" type="date" name="titre" style="width:100%;"></br>
+
+        <p>Classe : <input type="radio" name="IsMale" value="true" /></p>
+
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+        </br>
+    </form></br>
+
     <form method="post" action="">
-        <btn class="w3-btn w3-round-large w3-amber w3-center" type="submit" style="margin-bottom: 20px">Gestion de tournoi</btn>
+        <btn class="w3-btn w3-round-large w3-red w3-center" type="submit" style="margin-bottom: 20px">Supprimer un tournoi</btn>
     </form>
 </div>
 
 <div class="w3-content w3-container w3-white w3-center w3-display-middle w3-hide-small" style="padding: 60px 100px 60px 100px;">
-    <h1 class="w3-red"> MON COMPTE ADMIN</h1></br>
+    <h1 class="w3-black"> MON COMPTE ADMIN</h1></br>
     <h3>Modification des articles sur la page d'accueil</h3></br>
     <a href="accueiladmin"><btn class="w3-btn w3-round-large w3-amber w3-center" type="submit" style="margin-bottom: 20px"> Gestion de l'accueil </btn>
     </a>
     </br>
-    <h3>Création et organisation de tournoi de poker</h3></br>
+    <h3>Création et organisation de tournoi de poker</h3>
+
+    <form method="post" action="addtounoi" >
+
+        <p>Date :</p>
+        <input class="w3-border w3-input" id="id_titre" type="date" name="titre" style="width:100%;"></br>
+
+        <p>Classe : <input type="radio" name="IsMale" value="true" /></p>
+
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+        </br>
+    </form></br>
+
     <form method="post" action="">
-        <btn class="w3-btn w3-round-large w3-amber w3-center" type="submit" style="margin-bottom: 20px">Gestion de tournoi</btn>
+        <btn class="w3-btn w3-round-large w3-red w3-center" type="submit" style="margin-bottom: 20px">Supprimer un tournoi</btn>
     </form>
 </div>
 

@@ -15,11 +15,11 @@ public class ArticleDao {
 
     public DataSource getDatasource() {
         MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setServerName("nr84dudlpkazpylz.chr7pe7iynqr.eu-west-1.rds.amazonaws.com");
+        dataSource.setServerName("localhost");
         dataSource.setPort(3306);
-        dataSource.setDatabaseName("d2ecpo8shdq7pdmr");
-        dataSource.setUser("wzw4zb6dvsoypc74");
-        dataSource.setPassword("su9d7layctq9uwzf");
+        dataSource.setDatabaseName("pokheir");
+        dataSource.setUser("root");
+        dataSource.setPassword("");
 
         return dataSource;
     }

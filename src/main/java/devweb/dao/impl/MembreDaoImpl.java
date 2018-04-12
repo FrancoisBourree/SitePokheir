@@ -12,6 +12,7 @@ public class MembreDaoImpl implements MembreDao {
     @Override
     public List<Membre> listMembres(){
         String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' ORDER BY nbPoints DESC;";
+
         List<Membre> listofMembres = new ArrayList<>();
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
@@ -55,7 +56,7 @@ public class MembreDaoImpl implements MembreDao {
 
     @Override
     public void addMembre(String email, String nom, String prenom, String classe, String mdp) {
-        String query = "INSERT INTO membre(email, nom, prenom, classe, mdp, nbPoints, partiesGagnees, partiesJouees) VALUES(?,?,?,?,?,'0','0','0')";
+        String query = "INSERT INTO membre(email, nom, prenom, classe, mdp, nbPoints, partiesGagnees, partiesJouees, participe) VALUES(?,?,?,?,?,'0','0','0')";
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, email);
