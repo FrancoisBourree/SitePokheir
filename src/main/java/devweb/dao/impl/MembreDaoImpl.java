@@ -7,11 +7,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MembreDaoImpl implements MembreDao {
+public class MembreDaoImpl implements MembreDao{
 
     @Override
     public List<Membre> listMembres(){
-        String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' ORDER BY nbPoints DESC;";
+        String query = "SELECT * FROM membre ORDER BY nbPoints DESC;";
 
         List<Membre> listofMembres = new ArrayList<>();
         try (
@@ -24,13 +24,35 @@ public class MembreDaoImpl implements MembreDao {
                         new Membre(resultSet.getString("email"),resultSet.getString("nom"),
                                 resultSet.getString("prenom"),resultSet.getString("classe"),
                                 resultSet.getString("mdp"),resultSet.getInt("nbPoints"),
-                                resultSet.getInt("partiesGagnees"),resultSet.getInt("partiesJouees")));
+                                resultSet.getInt("partiesGagnees"),resultSet.getInt("participe")));
 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return listofMembres;
+    }
+
+
+    public List<Membre> listParticipant() {
+        String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' AND inscrit='1' ORDER BY nbPoints DESC;";
+        List<Membre> listofParticipant = new ArrayList<>();
+        try (
+                Connection connection = DataSourceProvider.getDataSource().getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+        ) {
+            while (resultSet.next()) {
+                listofParticipant.add(
+                        new Membre(resultSet.getString("email"), resultSet.getString("nom"),
+                                resultSet.getString("prenom"), resultSet.getString("classe"),
+                                resultSet.getString("mdp"), resultSet.getInt("nbPoints"),
+                                resultSet.getInt("partiesGagnees"), resultSet.getInt("participe")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listofParticipant;
     }
 
     @Override
@@ -45,7 +67,7 @@ public class MembreDaoImpl implements MembreDao {
                             resultSet.getString("email"),resultSet.getString("nom"),
                             resultSet.getString("prenom"),resultSet.getString("classe"),
                             resultSet.getString("mdp"),resultSet.getInt("nbPoints"),
-                            resultSet.getInt("partiesGagnees"),resultSet.getInt("partiesJouees"));
+                            resultSet.getInt("partiesGagnees"),resultSet.getInt("participe"));
                 }
             }
         } catch (SQLException e) {
@@ -107,6 +129,46 @@ public class MembreDaoImpl implements MembreDao {
             Connection connection = DataSourceProvider.getDataSource().getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, mdp);
+            statement.setString(2, email);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void inscrire(String email) {
+        String query = "UPDATE membre SET participe='1' WHERE email=?";
+        try {
+            Connection connection = DataSourceProvider.getDataSource().getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, email);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void desinscrire(String email) {
+        String query = "UPDATE membre SET participe='0' WHERE email=?";
+        try {
+            Connection connection = DataSourceProvider.getDataSource().getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, email);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void addPoint(String email, Integer nbpoint) {
+        String query = "UPDATE membre SET nbPoints=nbPoints+? WHERE email=?";
+        try (
+                Connection connection = DataSourceProvider.getDataSource().getConnection();
+                PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, nbpoint);
             statement.setString(2, email);
             statement.executeUpdate();
         } catch (SQLException e) {

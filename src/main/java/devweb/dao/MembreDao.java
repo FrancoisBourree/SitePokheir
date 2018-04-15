@@ -28,4 +28,10 @@ public interface MembreDao {
     public void deleteMembre(String email);
 
     public void modifMdp(String email, String mdp);
+
+    public void addPoint(String email, Integer nbpoint);
+
+    public void inscrire(String email);
+
+    public void desinscrire(String email);
 }

@@ -46,5 +46,16 @@ public class MembreLibrary {
         membreDao.modifMdp(email,mdp);
     }
 
+    public void inscrire(String email){
+        membreDao.inscrire(email);
+    }
 
+    public void desinscrire(String email){
+        membreDao.desinscrire(email);
+    }
+
+    public void addPoint(String email, Integer nbPoints){
+
+        membreDao.addPoint(email,nbPoints);
+    };
 }

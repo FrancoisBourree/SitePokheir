@@ -1,5 +1,6 @@
 package devweb.servlets.admin;
 
+import devweb.services.TournoiService;
 import devweb.servlets.GenericServlet;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
@@ -20,6 +21,7 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         resp.setCharacterEncoding("UTF-8");
 
         WebContext context = new WebContext(req, resp, req.getServletContext());
+        context.setVariable("tournois", TournoiService.getInstance().listTournois());
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());

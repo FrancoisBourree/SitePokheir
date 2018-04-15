@@ -17,7 +17,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet("/addtounoi")
+@WebServlet("/addtournoi")
 @MultipartConfig
 public class AddTournoiServlet  extends HttpServlet { //crée une servlet generique
 
@@ -25,19 +25,9 @@ public class AddTournoiServlet  extends HttpServlet { //crée une servlet generi
     // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String datetournoiStr = req.getParameter("datetournoi");
-        Integer nombreInscrits = 0;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
-        java.util.Date date = sdf.parse(datetournoiStr);
-        java.sql.Date datetournoi = new java.sql.Date(date.getTime());
-
-        Date datetournoi = null;
-        try {
-            datetournoi = sdf.parse(datetournoiStr);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        String datetournoi = req.getParameter("datetournoi");
         Boolean classe = Boolean.parseBoolean(req.getParameter("classe"));
+        Integer nombreInscrits = 0;
 
         Tournoi tournoi = new Tournoi(null, datetournoi, nombreInscrits, classe);
         try {

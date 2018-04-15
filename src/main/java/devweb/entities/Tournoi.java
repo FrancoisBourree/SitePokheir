@@ -6,12 +6,12 @@ public class Tournoi{
 
     // Les attributs
     private Integer idTournois;
-    private Date date;
+    private String date;
     private Integer nombreInscrit;
     private Boolean classe;
 
     // Le constructeur
-    public Tournoi(Integer idTournois, Date date, Integer nombreInscrit, Boolean classe) {
+    public Tournoi(Integer idTournois, String date, Integer nombreInscrit, Boolean classe) {
         this.idTournois = idTournois;
         this.date = date;
         this.nombreInscrit = nombreInscrit;
@@ -28,11 +28,11 @@ public class Tournoi{
         this.idTournois = idTournois;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

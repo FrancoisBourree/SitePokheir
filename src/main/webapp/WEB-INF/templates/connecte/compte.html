@@ -34,8 +34,13 @@
 
     <!-- Inscription tournoi -->
 
-    <form method="post">
+    <form method="post" action="/inscriretournoi">
         <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Inscription au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
+    </br>
+
+    <form method="post" action="/desinscriretournoi">
+        <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Désinscription" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
     </br>
 
@@ -56,19 +61,19 @@
     <form action="modifmdp" method="post">
         <h3> Changer de mot de passe:</h3>
         <p>Nouveau mot de passe :</p>
-        <input class="w3-border w3-input" id="id_password1" type="text" name="password">
+        <input class="w3-border w3-input" id="id_password2" type="text" name="password">
         <input class="w3-btn w3-round-large w3-green w3-center" type="submit" value="Valider" style="margin-bottom: 20px;margin-top: 30px"></br>
     </form>
     </br>
 
     <!-- Inscription tournoi -->
 
-    <form method="post">
+    <form method="post" action="/inscriretournoi">
         <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Inscription au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
     </br>
 
-    <form method="post">
+    <form method="post" action="/desinscriretournoi">
         <input class="w3-btn w3-round w3-amber w3-center" type="submit" value="Désinscription" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
     </br>

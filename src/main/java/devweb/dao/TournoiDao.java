@@ -29,7 +29,7 @@ public class TournoiDao{
             while(resultSet.next()) {
                 tournois.add(new Tournoi(
                         resultSet.getInt("idTournois"),
-                        resultSet.getDate("date"),
+                        resultSet.getString("date"),
                         resultSet.getInt("nombreInscrits"),
                         resultSet.getBoolean("classe")));
             }
@@ -43,7 +43,7 @@ public class TournoiDao{
         String query = "INSERT INTO tournois(date, nombreInscrits, classe) VALUES(?, 0, ?)";
         try (Connection connection = getDatasource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setDate(1, tournoi.getDate());
+            statement.setString(1, tournoi.getDate());
             statement.setBoolean(2, tournoi.getClasse());
             statement.executeUpdate();
         } catch (SQLException e) {
