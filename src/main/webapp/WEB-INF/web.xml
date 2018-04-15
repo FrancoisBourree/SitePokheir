@@ -17,7 +17,20 @@
     <filter-mapping>
         <filter-name>AuthentificationFiltre</filter-name>
         <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/accueiladmin</url-pattern>
+        <url-pattern>/addarticle</url-pattern>
+        <url-pattern>/addtounoi</url-pattern>
+        <url-pattern>/compteadmin</url-pattern>
+        <url-pattern>/delarticle</url-pattern>
+        <url-pattern>/delcompte</url-pattern>
+        <url-pattern>/deltournoi</url-pattern>
+        <url-pattern>/tournoisAdmin</url-pattern>
         <url-pattern>/connecte/*</url-pattern>
+        <url-pattern>/accueil2</url-pattern>
+        <url-pattern>/classement2</url-pattern>
+        <url-pattern>/compte</url-pattern>
+        <url-pattern>/modifmdp</url-pattern>
+        <url-pattern>/tournois2</url-pattern>
         <url-pattern>/deconnexion</url-pattern>
     </filter-mapping>
 
@@ -38,7 +51,7 @@
     </filter>
     <filter-mapping>
         <filter-name>AuthentificationAdmin</filter-name>
-        <url-pattern>/connecte/compte</url-pattern>
+        <url-pattern>/compte</url-pattern>
     </filter-mapping>
 
     <!-- 4ème filtre : vérifie que l'on est admin -->
@@ -50,6 +63,7 @@
     <filter-mapping>
         <filter-name>FilterAdmin</filter-name>
         <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/accueiladmin</url-pattern>
 
     </filter-mapping>
 

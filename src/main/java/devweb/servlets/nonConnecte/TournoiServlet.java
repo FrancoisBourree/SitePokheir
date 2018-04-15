@@ -1,6 +1,7 @@
 package devweb.servlets.nonConnecte;
 
 import devweb.servlets.GenericServlet;
+import devweb.services.TournoiService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
@@ -20,6 +21,7 @@ public class TournoiServlet extends GenericServlet { //crée une servlet generiq
         resp.setCharacterEncoding("UTF-8");
 
         WebContext context = new WebContext(req, resp, req.getServletContext());
+        context.setVariable("tournois", TournoiService.getInstance().listTournois());
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/nonConnecte/tournois", context, resp.getWriter());

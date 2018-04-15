@@ -15,7 +15,6 @@ import java.io.IOException;
 @MultipartConfig
 public class AddArticleServlet extends HttpServlet{ //crée une servlet generique
 
-
     @Override
     // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

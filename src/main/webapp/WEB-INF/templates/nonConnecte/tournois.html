@@ -29,6 +29,14 @@
     <div class="w3-row"> </div>
 </div>
 
+<div class="w3-row-padding w3-center">
+    <div class="w3-col m3 w3-content" style="margin-bottom: 50px;" th:each="tournoi : ${tournois}">
+        <h3 th:text="${tournoi.datetournoi}">Date 1</h3>
+
+
+    </div>
+</div>
+
 <div th:replace="~{fragment::script}"></div>
 
 </body>

@@ -25,15 +25,15 @@
     <form method="post" action="addtounoi" >
 
         <p>Date :</p>
-        <input class="w3-border w3-input" id="id_titre" type="date" name="titre" style="width:100%;"></br>
+        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;"></br>
 
-        <p>Classe : <input type="radio" name="IsMale" value="true" /></p>
+        <p>Classe : <input type="radio" name="classe" value="true" /></p>
 
         </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
     </form></br>
 
-    <form method="post" action="">
+    <form method="post" action="deltournoi">
         <btn class="w3-btn w3-round-large w3-red w3-center" type="submit" style="margin-bottom: 20px">Supprimer un tournoi</btn>
     </form>
 </div>
@@ -44,22 +44,31 @@
     <a href="accueiladmin"><btn class="w3-btn w3-round-large w3-amber w3-center" type="submit" style="margin-bottom: 20px"> Gestion de l'accueil </btn>
     </a>
     </br>
+
     <h3>Création et organisation de tournoi de poker</h3>
 
-    <form method="post" action="addtounoi" >
+    <form method="post" action="addtounoi">
 
         <p>Date :</p>
-        <input class="w3-border w3-input" id="id_titre" type="date" name="titre" style="width:100%;"></br>
+        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;"></br>
 
-        <p>Classe : <input type="radio" name="IsMale" value="true" /></p>
+        <p>Classe : <input type="radio" name="classe" value="true" /></p>
 
         </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
     </form></br>
 
-    <form method="post" action="">
-        <btn class="w3-btn w3-round-large w3-red w3-center" type="submit" style="margin-bottom: 20px">Supprimer un tournoi</btn>
+    <form method="post" action="deltournoi">
+        <h3 class="w3-amber"> Suppression de tournoi </h3></br>
+        <select id="w3-select" name="id-Tournoi">
+            <option> Selection du tournoi à supprimer</option>
+            <option name="option" th:each="tournoi : ${tournoiList}"
+                    th:text="${tournoi.date}">
+            </option>
+        </select></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Désinscrire" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
+
 </div>
 
 <div th:replace="~{fragment::script}"></div>

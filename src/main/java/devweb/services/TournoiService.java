@@ -3,6 +3,8 @@ package devweb.services;
 import devweb.dao.TournoiDao;
 import devweb.entities.Tournoi;
 
+import java.util.List;
+
 public class TournoiService {
 
     private static class TournoiServiceHolder {
@@ -16,6 +18,10 @@ public class TournoiService {
 
     private TournoiDao tournoiDao = new TournoiDao();
 
+    public List<Tournoi> listTournois() {
+        return tournoiDao.listTournois();
+    }
+
     public void addTournoi(Tournoi tournoi) {
         tournoiDao.addTournoi(tournoi);
     }
@@ -23,10 +29,5 @@ public class TournoiService {
     public void delTournoi(Integer idTournoi){
         tournoiDao.delTournoi(idTournoi);
     }
-
-
-
-
-
 
 }
