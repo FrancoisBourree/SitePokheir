@@ -34,12 +34,19 @@
 
         <p>Classe : <input type="radio" name="classe" value="true" /></p>
 
-        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Créer un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
     </form></br>
 
     <form method="post" action="deltournoi">
-        <btn class="w3-btn w3-round-large w3-red w3-center" type="submit" style="margin-bottom: 20px">Supprimer un tournoi</btn>
+        <h3 class="w3-amber"> Suppression de tournoi </h3></br>
+        <select id="w3-select" name="id-Tournoi">
+            <option> Selection du tournoi à supprimer</option>
+            <option name="option" th:each="tournoi : ${tournoiList}"
+                    th:text="${tournoi.date}">
+            </option>
+        </select></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Supprimer" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
 </div>
 
@@ -62,7 +69,7 @@
 
         <p>Classe : <input type="radio" name="classe" value="true" /></p>
 
-        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Crée un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Créer un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
     </form></br>
 
@@ -74,7 +81,7 @@
                     th:text="${tournoi.date}">
             </option>
         </select></br>
-        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Désinscrire" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Supprimer" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
 
 </div>

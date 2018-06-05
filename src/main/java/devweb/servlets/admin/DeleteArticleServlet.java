@@ -1,6 +1,5 @@
 package devweb.servlets.admin;
 
-
 import devweb.services.ArticleService;
 
 import javax.servlet.ServletException;
@@ -10,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 @WebServlet("/delarticle")
+
     public class DeleteArticleServlet extends HttpServlet { //crée une servlet
 
         @Override

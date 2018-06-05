@@ -52,7 +52,7 @@ public class TournoiDao{
     }
 
     public void delTournoi(Integer idTournois) {
-        String query = "DELETE FROM tournois WHERE idTournoi=? ";
+        String query = "DELETE FROM tournois WHERE idTournois=? ";
         try (Connection connection = getDatasource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, idTournois);
