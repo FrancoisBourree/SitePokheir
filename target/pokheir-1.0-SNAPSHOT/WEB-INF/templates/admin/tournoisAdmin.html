@@ -24,6 +24,7 @@
 
 <!-- Container (About Section) -->
 <div class="w3-container w3-padding-64 w3-center" id="about">
+
     <h3 style="text-decoration: underline">Tournoi en cours</h3>
     <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
 
@@ -36,18 +37,30 @@
     </form>
     <div class="w3-row"> </div>
 
-    <div class="w3-content w3-container w3-white w3-center">
-        <h1 class="w3-black w3-center w3-round-xlarge"> Ajouter des points </h1>
-        <form method="post" action="/addpoint">
-            <select class="selection w3-select" name="emailParticipant" style="width: 60%;margin-top: 20px">
-                <option > Participants </option>
-                <option name="option3" th:each="membre : ${membresList}"
-                        th:value="${membre.email}">
+    <form method="post" action="/addpoint">
+        <div class="w3-content w3-container w3-white w3-center">
+            <h3> Choix du tournoi </h3></br>
+            <select id="w3-select" name="id-Tournoi">
+                <option> Selection du tournoi</option>
+                <option name="option" th:each="tournoi : ${tournoiList}"
+                        th:text="${tournoi.date}"
+                        th:value="${tournoi.idTournois}">
                 </option>
             </select></br>
-            <input class="w3-center w3-select"name="nbPoints" placeholder="points..." style="width: 60%;margin-top: 15px;height: 40px;"></br>
-            <input class="w3-btn w3-green" type="submit" style="margin-top: 40px;" value="Ajouter"/></form></br>
-    </div>
+
+            <h1 class="w3-black w3-center w3-round-xlarge"> Ajouter des points </h1>
+            <form method="post" action="/addpoint">
+                <select class="selection w3-select" name="emailParticipant" style="width: 60%;margin-top: 20px">
+                    <option > Participants </option>
+                    <option name="option3" th:each="membre : ${membresList}"
+                            th:text="${membre.email}"
+                            th:value="${membre.email}">
+                    </option>
+                </select></br>
+                <input class="w3-center w3-select"name="nbPoints" placeholder="points..." style="width: 60%;margin-top: 15px;height: 40px;"></br>
+                <input class="w3-btn w3-green" type="submit" style="margin-top: 40px;" value="Ajouter"/></form></br>
+        </div>
+    </form>
 
 </div>
 

@@ -1,5 +1,6 @@
 package devweb.servlets.admin;
 
+import devweb.entities.Tournoi;
 import devweb.services.TournoiService;
 import devweb.servlets.GenericServlet;
 import org.thymeleaf.TemplateEngine;
@@ -10,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet("/tournoisAdmin")
 public class TournoiAdminServlet extends GenericServlet { //crée une servlet generique
@@ -22,6 +24,9 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("tournois", TournoiService.getInstance().listTournois());
+
+        List<Tournoi> listOfTournoi = TournoiService.getInstance().listTournois();
+        context.setVariable("tournoiList",listOfTournoi);
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());
