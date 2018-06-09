@@ -12,6 +12,10 @@ public class MembreLibrary {
         return membreDao.listMembres();
     }
 
+    public List<Membre> listParticipant() {
+        return membreDao.listParticipant();
+    }
+
     private static class MembreLibraryHolder {
         private final static MembreLibrary instance = new MembreLibrary();
     }

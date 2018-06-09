@@ -51,7 +51,7 @@
             <h1 class="w3-black w3-center w3-round-xlarge"> Ajouter des points </h1>
             <select class="selection w3-select" name="emailParticipant" style="width: 60%;margin-top: 20px">
                 <option > Participants </option>
-                <option name="option3" th:each="membre : ${membresList}"
+                <option name="option3" th:each="membre : ${tournoiParticipants}"
                         th:text="${membre.email}"
                         th:value="${membre.email}">
                 </option>

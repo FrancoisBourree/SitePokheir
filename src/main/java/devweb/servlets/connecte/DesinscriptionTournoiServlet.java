@@ -21,7 +21,7 @@ public class DesinscriptionTournoiServlet extends GenericServlet {
 
         try {
             MembreLibrary.getInstance().desinscrire(identifiant);
-            resp.sendRedirect("/compte");
+            resp.sendRedirect("/tournois2");
         } catch (IllegalArgumentException e) {
             req.getSession().setAttribute("ErrorMessage", e.getMessage());
         }

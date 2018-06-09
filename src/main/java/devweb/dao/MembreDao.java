@@ -19,6 +19,8 @@ public interface MembreDao {
 
     public List<Membre> listMembres();
 
+    public List<Membre> listParticipant();
+
     public Membre getMembre(String email);
 
     public void addMembre(String email, String nom, String prenom, String classe, String mdp);
