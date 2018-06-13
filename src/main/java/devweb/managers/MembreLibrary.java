@@ -12,8 +12,12 @@ public class MembreLibrary {
         return membreDao.listMembres();
     }
 
-    public List<Membre> listParticipant() {
-        return membreDao.listParticipant();
+    public List<Membre> listParticipantRandom() {
+        return membreDao.listParticipantRandom();
+    }
+
+    public List<Membre> listParticipantClasse() {
+        return membreDao.listParticipantClasse();
     }
 
     private static class MembreLibraryHolder {

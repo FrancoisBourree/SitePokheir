@@ -34,16 +34,16 @@ public class MembreDaoImpl implements MembreDao{
     }
 
 
-    public List<Membre> listParticipant() {
+    public List<Membre> listParticipantClasse() {
         String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' AND participe='1' ORDER BY nbPoints DESC";
-        List<Membre> listofParticipant = new ArrayList<>();
+        List<Membre> listofParticipantClasse = new ArrayList<>();
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
                 Statement statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
         ) {
             while (resultSet.next()) {
-                listofParticipant.add(
+                listofParticipantClasse.add(
                         new Membre(resultSet.getString("email"), resultSet.getString("nom"),
                                 resultSet.getString("prenom"), resultSet.getString("classe"),
                                 resultSet.getString("mdp"), resultSet.getInt("nbPoints"),
@@ -52,8 +52,30 @@ public class MembreDaoImpl implements MembreDao{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return listofParticipant;
+        return listofParticipantClasse;
     }
+
+    public List<Membre> listParticipantRandom() {
+        String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' AND participe='1'";
+        List<Membre> listofParticipantRandom = new ArrayList<>();
+        try (
+                Connection connection = DataSourceProvider.getDataSource().getConnection();
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+        ) {
+            while (resultSet.next()) {
+                listofParticipantRandom.add(
+                        new Membre(resultSet.getString("email"), resultSet.getString("nom"),
+                                resultSet.getString("prenom"), resultSet.getString("classe"),
+                                resultSet.getString("mdp"), resultSet.getInt("nbPoints"),
+                                resultSet.getInt("partiesGagnees"), resultSet.getInt("participe")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listofParticipantRandom;
+    }
+
 
     @Override
     public Membre getMembre(String email) {

@@ -28,8 +28,9 @@ public class AddTournoiServlet  extends HttpServlet { //crée une servlet generi
         String datetournoi = req.getParameter("datetournoi");
         Boolean classe = Boolean.parseBoolean(req.getParameter("classe"));
         Integer nombreInscrits = 0;
+        Integer placesTable = 0;
 
-        Tournoi tournoi = new Tournoi(null, datetournoi, nombreInscrits, classe);
+        Tournoi tournoi = new Tournoi(null, datetournoi, nombreInscrits, placesTable,classe);
         try {
             TournoiService.getInstance().addTournoi(tournoi);
             resp.sendRedirect("tournois2");

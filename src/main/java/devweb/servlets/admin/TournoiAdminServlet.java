@@ -30,8 +30,11 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         List<Tournoi> listOfTournoi = TournoiService.getInstance().listTournois();
         context.setVariable("tournoiList",listOfTournoi);
 
-        List<Membre> listParticipant = MembreLibrary.getInstance().listParticipant();
-        context.setVariable("tournoiParticipants",listParticipant);
+        List<Membre> listParticipantClasse = MembreLibrary.getInstance().listParticipantClasse();
+        context.setVariable("tournoiParticipantClasse",listParticipantClasse);
+
+        List<Membre> listParticipantRandom = MembreLibrary.getInstance().listParticipantRandom();
+        context.setVariable("tournoiParticipantRandom",listParticipantRandom);
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());

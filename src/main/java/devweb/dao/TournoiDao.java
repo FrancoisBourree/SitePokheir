@@ -31,6 +31,7 @@ public class TournoiDao{
                         resultSet.getInt("idTournois"),
                         resultSet.getString("date"),
                         resultSet.getInt("nombreInscrits"),
+                        resultSet.getInt("placesTable"),
                         resultSet.getBoolean("classe")));
             }
         } catch (SQLException e) {
@@ -40,7 +41,7 @@ public class TournoiDao{
     }
 
     public void addTournoi(Tournoi tournoi) {
-        String query = "INSERT INTO tournois(date, nombreInscrits, classe) VALUES(?, 0, ?)";
+        String query = "INSERT INTO tournois(date, nombreInscrits, placesTable,classe) VALUES(?, 0, 0, ?)";
         try (Connection connection = getDatasource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, tournoi.getDate());

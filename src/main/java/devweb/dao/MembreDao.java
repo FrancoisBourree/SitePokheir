@@ -19,7 +19,9 @@ public interface MembreDao {
 
     public List<Membre> listMembres();
 
-    public List<Membre> listParticipant();
+    public List<Membre> listParticipantClasse();
+
+    public List<Membre> listParticipantRandom();
 
     public Membre getMembre(String email);
 
