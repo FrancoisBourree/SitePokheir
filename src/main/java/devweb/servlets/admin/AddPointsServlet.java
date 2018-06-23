@@ -26,7 +26,7 @@ public class AddPointsServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        resp.sendRedirect("tournoiadmin");
+        resp.sendRedirect("tournoisAdmin");
 
     }
 }

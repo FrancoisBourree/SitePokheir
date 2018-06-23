@@ -40,6 +40,18 @@ public class TournoiDao{
         return tournois;
     }
 
+    public int trouverplacesTable(Integer idTournois){
+        int placesTable = 69;
+        try (Connection connection = getDatasource().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("SELECT placesTable FROM tournois WHERE idTournois=? ")) {
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return placesTable;
+        }
+
+
     public void addTournoi(Tournoi tournoi) {
         String query = "INSERT INTO tournois(date, nombreInscrits, placesTable,classe) VALUES(?, 0, 0, ?)";
         try (Connection connection = getDatasource().getConnection();

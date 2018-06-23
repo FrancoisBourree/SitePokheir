@@ -27,6 +27,9 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("tournois", TournoiService.getInstance().listTournois());
 
+        //int placesTables = TournoiService.getInstance().trouverplacesTable();
+        //context.setVariable("placesTables",placesTables);
+
         List<Tournoi> listOfTournoi = TournoiService.getInstance().listTournois();
         context.setVariable("tournoiList",listOfTournoi);
 
@@ -38,5 +41,10 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());
+
+        Integer nbInscrits = MembreLibrary.getInstance().compterLesInscrits();
+        context.setVariable("nombreInscrits",nbInscrits);
+
+        int placesTable = (int) req.getSession().getAttribute("placesTable");
     }
 }

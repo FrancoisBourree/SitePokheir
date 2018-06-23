@@ -28,6 +28,10 @@
     <h3 style="text-decoration: underline">Tournoi en cours</h3>
     <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
 
+    <p th:text="'Nombre de joueurs inscrits :   '+${nombreInscrits}"></p></br>
+
+    <span th:text="${tournoiList}">2</span>
+
 <!-- Chrono -->
 <h1>Chronomètre</h1>
     <form name="chronoForm">
@@ -36,6 +40,18 @@
         <input type="button" name="reset" value="Reset" onClick="chronoReset()" />
     </form>
     <div class="w3-row"> </div>
+
+    <form method="post" action="/choixTournoi">
+        <h3 class="w3-amber"> Choix de tournoi </h3></br>
+        <select id="w3-select" name="placesTable">
+            <option> Selection du tournoi</option>
+            <option name="option" th:each="tournoi : ${tournoiList}"
+                    th:text="${tournoi.date}"
+                    th:value="${tournoi.placesTable}">
+            </option>
+        </select></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Choisir" style="margin-bottom: 20px;width: 234px;"></br>
+    </form>
 
     <form method="post" action="/addpoint">
         <div class="w3-content w3-container w3-white w3-center">

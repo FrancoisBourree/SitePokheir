@@ -190,12 +190,28 @@ public class MembreDaoImpl implements MembreDao{
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
                 PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, nbpoint);
-            statement.setString(2, email);
-            statement.executeUpdate();
+                 statement.setInt(1, nbpoint);
+                 statement.setString(2, email);
+                 statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public int compterLesInscrits(){
+        Integer nbInscrits = 0;
+        try (Connection connection = DataSourceProvider.getDataSource().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("Select count(participe) AS nombreInscrits From membre WHERE participe='1'")) {
+            resultSet.next();
+            nbInscrits=resultSet.getInt("nombreInscrits");
+            resultSet.close();
+            statement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nbInscrits;
     }
 
 

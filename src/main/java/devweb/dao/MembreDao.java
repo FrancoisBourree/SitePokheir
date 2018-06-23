@@ -23,6 +23,8 @@ public interface MembreDao {
 
     public List<Membre> listParticipantRandom();
 
+    public int compterLesInscrits();
+
     public Membre getMembre(String email);
 
     public void addMembre(String email, String nom, String prenom, String classe, String mdp);

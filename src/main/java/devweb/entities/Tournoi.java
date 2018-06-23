@@ -61,4 +61,6 @@ public class Tournoi{
     public void setClasse(Boolean classe) {
         this.classe = classe;
     }
+
+
 }

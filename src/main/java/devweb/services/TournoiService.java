@@ -22,6 +22,10 @@ public class TournoiService {
         return tournoiDao.listTournois();
     }
 
+    public int trouverplacesTable(Integer idTournoi){
+        return tournoiDao.trouverplacesTable(idTournoi);
+    }
+
     public void addTournoi(Tournoi tournoi) {
         tournoiDao.addTournoi(tournoi);
     }

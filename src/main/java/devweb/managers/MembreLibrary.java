@@ -20,6 +20,10 @@ public class MembreLibrary {
         return membreDao.listParticipantClasse();
     }
 
+    public int compterLesInscrits() {
+        return membreDao.compterLesInscrits();
+    }
+
     private static class MembreLibraryHolder {
         private final static MembreLibrary instance = new MembreLibrary();
     }

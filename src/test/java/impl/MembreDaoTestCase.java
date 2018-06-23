@@ -25,10 +25,10 @@ public class MembreDaoTestCase {
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              Statement stmt = connection.createStatement()) {
             stmt.executeUpdate("DELETE FROM membre");
-            stmt.executeUpdate("INSERT INTO membre VALUES ('jp@hei.fr','Boulon','Jacques','H44','123','0','0','0')");
-            stmt.executeUpdate("INSERT INTO membre VALUES ('michel@hei.fr','Pastel','Richard','H55','voldemort','0','0','0')");
-            stmt.executeUpdate("INSERT INTO membre VALUES ('jc@hei.fr','Blanc','Michel','H32','vis','0','0','0')");
-            stmt.executeUpdate("INSERT INTO membre VALUES ('admin@hei.yncrea.fr','admin','admin','H00','pokheir2018','0','0','0')");
+            stmt.executeUpdate("INSERT INTO membre VALUES ('jp@hei.fr','Boulon','Jacques','H44','123','0','0','0','0')");
+            stmt.executeUpdate("INSERT INTO membre VALUES ('michel@hei.fr','Pastel','Richard','H55','voldemort','0','0','0','1')");
+            stmt.executeUpdate("INSERT INTO membre VALUES ('jc@hei.fr','Blanc','Michel','H32','vis','0','0','0','1')");
+            stmt.executeUpdate("INSERT INTO membre VALUES ('admin@hei.yncrea.fr','admin','admin','H00','pokheir2018','0','0','0','0')");
 
         }
     }
@@ -38,9 +38,9 @@ public class MembreDaoTestCase {
         // WHEN
         List<Membre> membres = membreDao.listMembres();
         // THEN
-        assertThat(membres).hasSize(3);
+        assertThat(membres).hasSize(4);
         assertThat(membres).extracting("email", "nom","nbPoints").containsOnly(tuple("jc@hei.fr", "Blanc",0), tuple("michel@hei.fr", "Pastel",0),
-                tuple("jp@hei.fr", "Boulon",0));
+                tuple("jp@hei.fr", "Boulon",0), tuple("admin@hei.yncrea.fr", "admin",0));
     }
 
     @Test
@@ -74,7 +74,7 @@ public class MembreDaoTestCase {
         // THEN
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              Statement stmt = connection.createStatement()) {
-            try (ResultSet rs = stmt.executeQuery("SELECT * FROM membre WHERE email='test' AND nom = 'test' AND prenom='test' AND classe='test' AND mdp='test' AND nbPoints='0' AND partiesGagnees='0' AND partiesJouees='0'")) {
+            try (ResultSet rs = stmt.executeQuery("SELECT * FROM membre WHERE email='test' AND nom = 'test' AND prenom='test' AND classe='test' AND mdp='test' AND nbPoints='0' AND partiesGagnees='0' AND partiesJouees='0' AND participe='0'")) {
                 assertThat(rs.next()).isTrue();
                 assertThat(rs.getString("email")).isEqualTo("test");
                 assertThat(rs.getString("nom")).isEqualTo("test");
@@ -84,6 +84,7 @@ public class MembreDaoTestCase {
                 assertThat(rs.getInt("nbPoints")).isEqualTo(0);
                 assertThat(rs.getInt("partiesGagnees")).isEqualTo(0);
                 assertThat(rs.getInt("partiesJouees")).isEqualTo(0);
+                assertThat(rs.getInt("participe")).isEqualTo(0);
                 assertThat(rs.next()).isFalse();
             }
         }
@@ -100,4 +101,24 @@ public class MembreDaoTestCase {
 
         }
     }
+
+
+
+    @Test
+    public void shouldCompterLesInscrits() throws Exception {
+        // WHEN
+        Integer nbInscrits = membreDao.compterLesInscrits();
+        // THEN
+        try (Connection connection = DataSourceProvider.getDataSource().getConnection();
+             Statement stmt = connection.createStatement()) {
+            try (ResultSet rs = stmt.executeQuery("Select count(participe) AS nombreInscrits From membre WHERE participe='1'")) {
+                assertThat(rs.next()).isTrue();
+                assertThat(rs.getInt("nombreInscrits")).isEqualTo(2);
+                assertThat(rs.next()).isFalse();
+            }
+        }
+
+
+    }
+
 }
