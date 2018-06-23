@@ -12,9 +12,10 @@ public class Membre {
     private Integer partiesGagnees;
     private Integer partiesJouees;
     private Boolean participe;
+    private Integer numeroTable;
 
     // Le constructeur
-    public Membre(String email, String nom, String prenom, String classe, String mdp, Integer nbPoints, Integer partiesGagnees, Integer partiesJouees) {
+    public Membre(String email, String nom, String prenom, String classe, String mdp, Integer nbPoints, Integer partiesGagnees, Integer partiesJouees, Boolean participe,Integer numeroTable) {
         this.email = email;
         this.nom = nom;
         this.prenom = prenom;
@@ -24,6 +25,7 @@ public class Membre {
         this.partiesGagnees = partiesGagnees;
         this.partiesJouees = partiesJouees;
         this.participe = participe;
+        this.numeroTable = numeroTable;
     }
 
     // Getters et Setters
@@ -97,5 +99,13 @@ public class Membre {
 
     public void setParticipe(Boolean participe) {
         this.participe = participe;
+    }
+
+    public void setNumeroTable(Integer numeroTable) {
+        this.numeroTable = numeroTable;
+    }
+
+    public Integer getNumeroTable() {
+        return numeroTable;
     }
 }

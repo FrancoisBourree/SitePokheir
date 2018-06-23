@@ -24,7 +24,8 @@ public class MembreDaoImpl implements MembreDao{
                         new Membre(resultSet.getString("email"),resultSet.getString("nom"),
                                 resultSet.getString("prenom"),resultSet.getString("classe"),
                                 resultSet.getString("mdp"),resultSet.getInt("nbPoints"),
-                                resultSet.getInt("partiesGagnees"),resultSet.getInt("participe")));
+                                resultSet.getInt("partiesGagnees"), resultSet.getInt("partiesJouees"),
+                                resultSet.getBoolean("participe"), resultSet.getInt("numeroTable")));
 
             }
         } catch (SQLException e) {
@@ -47,7 +48,8 @@ public class MembreDaoImpl implements MembreDao{
                         new Membre(resultSet.getString("email"), resultSet.getString("nom"),
                                 resultSet.getString("prenom"), resultSet.getString("classe"),
                                 resultSet.getString("mdp"), resultSet.getInt("nbPoints"),
-                                resultSet.getInt("partiesGagnees"), resultSet.getInt("participe")));
+                                resultSet.getInt("partiesGagnees"),resultSet.getInt("partiesJouees"),
+                                resultSet.getBoolean("participe"), resultSet.getInt("numeroTable")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -68,7 +70,8 @@ public class MembreDaoImpl implements MembreDao{
                         new Membre(resultSet.getString("email"), resultSet.getString("nom"),
                                 resultSet.getString("prenom"), resultSet.getString("classe"),
                                 resultSet.getString("mdp"), resultSet.getInt("nbPoints"),
-                                resultSet.getInt("partiesGagnees"), resultSet.getInt("participe")));
+                                resultSet.getInt("partiesGagnees"), resultSet.getInt("partiesJouees"),
+                                resultSet.getBoolean("participe"), resultSet.getInt("numeroTable")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -89,7 +92,8 @@ public class MembreDaoImpl implements MembreDao{
                             resultSet.getString("email"),resultSet.getString("nom"),
                             resultSet.getString("prenom"),resultSet.getString("classe"),
                             resultSet.getString("mdp"),resultSet.getInt("nbPoints"),
-                            resultSet.getInt("partiesGagnees"),resultSet.getInt("participe"));
+                            resultSet.getInt("partiesGagnees"), resultSet.getInt("partiesJouees"),
+                            resultSet.getBoolean("participe"), resultSet.getInt("numeroTable"));
                 }
             }
         } catch (SQLException e) {
@@ -100,7 +104,7 @@ public class MembreDaoImpl implements MembreDao{
 
     @Override
     public void addMembre(String email, String nom, String prenom, String classe, String mdp) {
-        String query = "INSERT INTO membre(email, nom, prenom, classe, mdp, nbPoints, partiesGagnees, partiesJouees, participe) VALUES(?,?,?,?,?,'0','0','0','0')";
+        String query = "INSERT INTO membre(email, nom, prenom, classe, mdp, nbPoints, partiesGagnees, partiesJouees, participe, numeroTable) VALUES(?,?,?,?,?,'0','0','0','0','0')";
         try (Connection connection = DataSourceProvider.getDataSource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, email);

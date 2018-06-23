@@ -1,5 +1,6 @@
 package impl;
 
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import devweb.dao.MembreDao;
 import devweb.dao.impl.DataSourceProvider;
 import devweb.dao.impl.MembreDaoImpl;
@@ -7,6 +8,7 @@ import devweb.entities.Membre;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,9 +22,30 @@ public class MembreDaoTestCase {
 
     private MembreDao membreDao = new MembreDaoImpl();
 
+    public static class DataSourceTestProvider {
+
+        public static MysqlDataSource dataSourceTest;
+
+        public static DataSource getDataSourceTest() {
+            if (dataSourceTest == null) {
+                dataSourceTest = new MysqlDataSource();
+                dataSourceTest.setServerName("localhost");
+                dataSourceTest.setPort(3306);
+                dataSourceTest.setDatabaseName("pokheir_test");
+                dataSourceTest.setUser("root");
+                dataSourceTest.setPassword("");
+
+            }
+            return dataSourceTest;
+        }
+
+
+
+    }
+
     @Before
     public void initDb() throws Exception {
-        try (Connection connection = DataSourceProvider.getDataSource().getConnection();
+        try (Connection connection = DataSourceTestProvider.getDataSourceTest().getConnection();
              Statement stmt = connection.createStatement()) {
             stmt.executeUpdate("DELETE FROM membre");
             stmt.executeUpdate("INSERT INTO membre VALUES ('jp@hei.fr','Boulon','Jacques','H44','123','0','0','0','0')");
