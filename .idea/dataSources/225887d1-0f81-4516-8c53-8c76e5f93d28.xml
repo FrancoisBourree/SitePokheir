@@ -1008,37 +1008,49 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="232" name="PRIMARY">
+    <column id="248" parent="232" name="numeroTable">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="249" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="233" name="idTournois">
+    <column id="250" parent="233" name="idTournois">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="233" name="date">
+    <column id="251" parent="233" name="date">
       <Position>2</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="233" name="nombreInscrits">
+    <column id="252" parent="233" name="nombreInscrits">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="233" name="classe">
+    <column id="253" parent="233" name="placesTable">
       <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="233" name="classe">
+      <Position>5</Position>
       <DataType>tinyint(1)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="253" parent="233" name="PRIMARY">
+    <key id="255" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idTournois</ColNames>
       <Primary>1</Primary>

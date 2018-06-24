@@ -75,6 +75,18 @@ public class TournoiDao{
         }
     }
 
+    public void choosePlacesParTable(Integer idTournois, Integer placesTable) {
+        String query = "UPDATE tournois SET placesTable =? WHERE idTournois=? ";
+        try (Connection connection = getDatasource().getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, idTournois);
+            statement.setInt(2, placesTable);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

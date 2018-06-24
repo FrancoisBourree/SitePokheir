@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -45,6 +46,25 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
         templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());
 
-        int placesTable = (int) req.getSession().getAttribute("placesTable");
+        //int placesParTable = (int) req.getSession().getAttribute("placesParTable");
+
+        int placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
+        context.setVariable("placesParTable",placesParTable);
+        req.getSession().setAttribute("placesParTable", placesParTable);
+    }
+
+    @Override
+    // Requête qui permet d'envoyer des infos
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        HttpSession session = req.getSession(); // création de la session
+
+        int placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
+        req.getSession().setAttribute("placesParTable", placesParTable);
+        WebContext context = new WebContext(req, resp, req.getServletContext());
+        context.setVariable("placesParTable",placesParTable);
+
+        resp.sendRedirect("/tournoisAdmin");
+
     }
 }

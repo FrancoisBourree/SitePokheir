@@ -34,4 +34,8 @@ public class TournoiService {
         tournoiDao.delTournoi(idTournoi);
     }
 
+    public void choosePlacesParTable(Integer idTournoi, Integer placesTable){
+        tournoiDao.choosePlacesParTable(idTournoi, placesTable);
+    }
+
 }
