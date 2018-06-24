@@ -41,14 +41,20 @@ public class TournoiDao{
     }
 
     public int trouverplacesTable(Integer idTournois){
-        int placesTable = 69;
+        String query = "SELECT placesTable FROM tournois WHERE idTournois=? ";
         try (Connection connection = getDatasource().getConnection();
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT placesTable FROM tournois WHERE idTournois=? ")) {
+             PreparedStatement statement = connection.prepareStatement(query)){
+                 statement.setInt(1, idTournois);
+                 try (ResultSet resultSet = statement.executeQuery()) {
+                     if (resultSet.next()) {
+                         return resultSet.getInt("placesTable");
+                     }
+                 }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return placesTable;
+        return 0;
         }
 
 

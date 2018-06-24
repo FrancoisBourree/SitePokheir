@@ -34,6 +34,9 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         List<Tournoi> listOfTournoi = TournoiService.getInstance().listTournois();
         context.setVariable("tournoiList",listOfTournoi);
 
+        //Integer placesParTable = TournoiService.getInstance().trouverplacesTable();
+        //context.setVariable("placesParTable",placesParTable);
+
         List<Membre> listParticipantClasse = MembreLibrary.getInstance().listParticipantClasse();
         context.setVariable("tournoiParticipantClasse",listParticipantClasse);
 
@@ -48,9 +51,13 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         //int placesParTable = (int) req.getSession().getAttribute("placesParTable");
 
-        int placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
+        Integer placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
         context.setVariable("placesParTable",placesParTable);
         req.getSession().setAttribute("placesParTable", placesParTable);
+
+        Integer idTournoisEnCours = Integer.parseInt(req.getParameter("id-Tournoi"));
+        context.setVariable("idTournoisEnCours",idTournoisEnCours);
+        req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
     }
 
     @Override
@@ -63,6 +70,10 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         req.getSession().setAttribute("placesParTable", placesParTable);
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("placesParTable",placesParTable);
+
+        Integer idTournoisEnCours = Integer.parseInt(req.getParameter("id-Tournoi"));
+        context.setVariable("idTournoisEnCours",idTournoisEnCours);
+        req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
 
         resp.sendRedirect("/tournoisAdmin");
 
