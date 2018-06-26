@@ -48,8 +48,8 @@
       <file leaf-file-name="TournoiAdminServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="80" column="73" lean-forward="true" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
+            <state relative-caret-position="488">
+              <caret line="98" column="13" lean-forward="true" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/src/main/java/devweb/dao/TournoiDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/ChoixPlacesParTableServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiEnCoursServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/tournoisAdmin.html" />
+        <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java" />
       </list>
     </option>
   </component>
@@ -260,7 +260,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="388" />
     <option name="y" value="-11" />
     <option name="width" value="997" />
@@ -953,7 +953,7 @@
       <workItem from="1529781295416" duration="16486000" />
       <workItem from="1529947167447" duration="4327000" />
       <workItem from="1530030302901" duration="225000" />
-      <workItem from="1530030903991" duration="10298000" />
+      <workItem from="1530030903991" duration="11601000" />
     </task>
     <servers />
   </component>
@@ -990,7 +990,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417755000" />
+    <option name="totallyTimeSpent" value="419058000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,7 +1002,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1493,8 +1493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="80" column="73" lean-forward="true" selection-start-line="80" selection-start-column="73" selection-end-line="80" selection-end-column="73" />
+        <state relative-caret-position="488">
+          <caret line="98" column="13" lean-forward="true" selection-start-line="98" selection-start-column="13" selection-end-line="98" selection-end-column="13" />
           <folding />
         </state>
       </provider>

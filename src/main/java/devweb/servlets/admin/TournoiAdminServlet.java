@@ -74,12 +74,30 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         Integer tournoiEnCours_placesTable = tournoiEnCours.getPlacesTable();
         context.setVariable("tournoiEnCours_placesTable",tournoiEnCours_placesTable);
 
+        List<Membre> listParticipantEnCours;
+
         if(tournoiEnCours_classe){
-            List<Membre> listParticipantEnCours =  listParticipantClasse;
+            listParticipantEnCours =  listParticipantClasse;
             context.setVariable("listParticipantEnCours",listParticipantEnCours);
         }else{
-            List<Membre> listParticipantEnCours =  listParticipantRandom;
+            listParticipantEnCours =  listParticipantRandom;
             context.setVariable("listParticipantRandom",listParticipantRandom);
+        }
+
+        int compteur = 0;
+        int numeroDeTable = 0;
+        for (Membre participantEnCours : listParticipantEnCours) {
+
+            if(compteur <= nbInscrits){
+                //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
+            }
+
+            if(compteur > nbInscrits){
+                //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
+                numeroDeTable += 1;
+                compteur = 0;
+            }
+            compteur++;
         }
 
 
