@@ -26,7 +26,7 @@ public class ChoixPlacesParTableServlet extends GenericServlet {
             } catch (IllegalArgumentException e) {
                 req.getSession().setAttribute("placesTableError", e.getMessage());
             }
-            resp.sendRedirect("tournoisAdmin");
+            resp.sendRedirect("/tournoisAdmin");
         }
 
 }

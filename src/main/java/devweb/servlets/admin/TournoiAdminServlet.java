@@ -60,6 +60,7 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
     }
 
+    /*
     @Override
     // Requête qui permet d'envoyer des infos
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -68,14 +69,15 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         int placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
         req.getSession().setAttribute("placesParTable", placesParTable);
-        WebContext context = new WebContext(req, resp, req.getServletContext());
-        context.setVariable("placesParTable",placesParTable);
+        //WebContext context = new WebContext(req, resp, req.getServletContext());
+        //context.setVariable("placesParTable",placesParTable);
 
-        Integer idTournoisEnCours = Integer.parseInt(req.getParameter("id-Tournoi"));
-        context.setVariable("idTournoisEnCours",idTournoisEnCours);
-        req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
+        //Integer idTournoisEnCours = Integer.parseInt(req.getParameter("id-Tournoi"));
+        //context.setVariable("idTournoisEnCours",idTournoisEnCours);
+        //req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
 
         resp.sendRedirect("/tournoisAdmin");
 
     }
+    */
 }
