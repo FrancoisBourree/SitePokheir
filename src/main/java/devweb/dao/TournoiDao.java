@@ -85,8 +85,8 @@ public class TournoiDao{
         String query = "UPDATE tournois SET placesTable =? WHERE idTournois=? ";
         try (Connection connection = getDatasource().getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, idTournois);
-            statement.setInt(2, placesTable);
+            statement.setInt(2, idTournois);
+            statement.setInt(1, placesTable);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
