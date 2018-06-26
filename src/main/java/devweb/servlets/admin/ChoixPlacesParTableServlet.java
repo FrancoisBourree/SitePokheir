@@ -20,6 +20,8 @@ public class ChoixPlacesParTableServlet extends GenericServlet {
 
             Integer placesTable = Integer.parseInt(req.getParameter("placesParTable"));
             Integer id = Integer.parseInt(req.getParameter("id-Tournoi"));
+            req.getSession().setAttribute("placesParTable", placesTable);
+            req.getSession().setAttribute("idTournoisEnCours", id);
 
             try {
                 TournoiService.getInstance().choosePlacesParTable(id,placesTable);

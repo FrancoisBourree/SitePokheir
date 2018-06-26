@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet("/tournoisAdmin")
@@ -51,13 +52,48 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         //int placesParTable = (int) req.getSession().getAttribute("placesParTable");
 
-        Integer placesParTable = Integer.parseInt(req.getParameter("placesParTable"));
+        Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
         context.setVariable("placesParTable",placesParTable);
-        req.getSession().setAttribute("placesParTable", placesParTable);
 
-        Integer idTournoisEnCours = Integer.parseInt(req.getParameter("id-Tournoi"));
-        context.setVariable("idTournoisEnCours",idTournoisEnCours);
-        req.getSession().setAttribute("idTournoisEnCours", idTournoisEnCours);
+        //Integer idTournoisEnCours =  (Integer) req.getSession().getAttribute("idTournoisEnCours");
+        //context.setVariable("idTournoisEnCours",idTournoisEnCours);
+
+        //INFORMATIONS DU TOURNOI EN COURS
+        Tournoi tournoiEnCours = (Tournoi) req.getSession().getAttribute("tournoiEnCours");
+        context.setVariable("tournoiEnCours",tournoiEnCours);
+
+        String tournoiEnCours_date = tournoiEnCours.getDate();
+        context.setVariable("tournoiEnCours_date",tournoiEnCours_date);
+
+        Boolean tournoiEnCours_classe = tournoiEnCours.getClasse();
+        context.setVariable("tournoiEnCours_classe",tournoiEnCours_classe);
+
+        Integer tournoiEnCours_nbInscrits = tournoiEnCours.getNombreInscrit();
+        context.setVariable("tournoiEnCours_nbInscrits",tournoiEnCours_nbInscrits);
+
+        Integer tournoiEnCours_placesTable = tournoiEnCours.getPlacesTable();
+        context.setVariable("tournoiEnCours_placesTable",tournoiEnCours_placesTable);
+
+        if(tournoiEnCours_classe){
+            List<Membre> listParticipantEnCours =  listParticipantClasse;
+            context.setVariable("listParticipantEnCours",listParticipantEnCours);
+        }else{
+            List<Membre> listParticipantEnCours =  listParticipantRandom;
+            context.setVariable("listParticipantRandom",listParticipantRandom);
+        }
+
+
+        /*
+        Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
+        context.setVariable("placesParTable",placesParTable);
+        Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
+        context.setVariable("placesParTable",placesParTable);
+        Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
+        context.setVariable("placesParTable",placesParTable);
+        Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
+        context.setVariable("placesParTable",placesParTable);
+        */
+
     }
 
     /*
