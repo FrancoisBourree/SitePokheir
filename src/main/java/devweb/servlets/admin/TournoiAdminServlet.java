@@ -26,8 +26,13 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
         resp.setCharacterEncoding("UTF-8");
 
+        TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
+
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("tournois", TournoiService.getInstance().listTournois());
+
+        String utilisateurConnecte = (String) req.getSession().getAttribute("utilisateurConnecte");
+        context.setVariable("utilisateurConnecte",utilisateurConnecte);
 
         //int placesTables = TournoiService.getInstance().trouverplacesTable();
         //context.setVariable("placesTables",placesTables);
@@ -47,8 +52,8 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         Integer nbInscrits = MembreLibrary.getInstance().compterLesInscrits();
         context.setVariable("nombreInscrits",nbInscrits);
 
-        TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
-        templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());
+        Integer nbTest = 42;
+        context.setVariable("nbTest",nbTest);
 
         //int placesParTable = (int) req.getSession().getAttribute("placesParTable");
 
@@ -59,48 +64,64 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         //context.setVariable("idTournoisEnCours",idTournoisEnCours);
 
         //INFORMATIONS DU TOURNOI EN COURS
-        Tournoi tournoiEnCours = (Tournoi) req.getSession().getAttribute("tournoiEnCours");
-        context.setVariable("tournoiEnCours",tournoiEnCours);
 
-        String tournoiEnCours_date = tournoiEnCours.getDate();
+// a remettre
+   //     String tournoiEnCours = (String) req.getSession().getAttribute("tournoiEnCours");
+   //     context.setVariable("tournoiEnCours",tournoiEnCours);
+
+        String tournoiEnCours_date = (String) req.getSession().getAttribute("tournoiEnCours_date");
         context.setVariable("tournoiEnCours_date",tournoiEnCours_date);
 
-        Boolean tournoiEnCours_classe = tournoiEnCours.getClasse();
-        context.setVariable("tournoiEnCours_classe",tournoiEnCours_classe);
-
-        Integer tournoiEnCours_nbInscrits = tournoiEnCours.getNombreInscrit();
-        context.setVariable("tournoiEnCours_nbInscrits",tournoiEnCours_nbInscrits);
-
-        Integer tournoiEnCours_placesTable = tournoiEnCours.getPlacesTable();
+        Integer tournoiEnCours_placesTable = (Integer) req.getSession().getAttribute("tournoiEnCours_placesTable");
         context.setVariable("tournoiEnCours_placesTable",tournoiEnCours_placesTable);
 
-        List<Membre> listParticipantEnCours;
+        Boolean tournoiEnCours_classe = (Boolean) req.getSession().getAttribute("tournoiEnCours_classe");
+        context.setVariable("tournoiEnCours_classe",tournoiEnCours_classe);
 
-        if(tournoiEnCours_classe){
-            listParticipantEnCours =  listParticipantClasse;
-            context.setVariable("listParticipantEnCours",listParticipantEnCours);
-        }else{
-            listParticipantEnCours =  listParticipantRandom;
-            context.setVariable("listParticipantRandom",listParticipantRandom);
-        }
 
-        int compteur = 0;
-        int numeroDeTable = 0;
-        for (Membre participantEnCours : listParticipantEnCours) {
 
-            if(compteur <= nbInscrits){
-                //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
+/*
+        if(tournoiEnCours != null) {
+
+            String tournoiEnCours_date = tournoiEnCours.getDate();
+            context.setVariable("tournoiEnCours_date", tournoiEnCours_date);
+
+            Boolean tournoiEnCours_classe = tournoiEnCours.getClasse();
+            context.setVariable("tournoiEnCours_classe", tournoiEnCours_classe);
+
+            Integer tournoiEnCours_nbInscrits = tournoiEnCours.getNombreInscrit();
+            context.setVariable("tournoiEnCours_nbInscrits", tournoiEnCours_nbInscrits);
+
+            Integer tournoiEnCours_placesTable = tournoiEnCours.getPlacesTable();
+            context.setVariable("tournoiEnCours_placesTable", tournoiEnCours_placesTable);
+
+            List<Membre> listParticipantEnCours;
+
+            if (tournoiEnCours_classe) {
+                listParticipantEnCours = listParticipantClasse;
+                context.setVariable("listParticipantEnCours", listParticipantEnCours);
+            } else {
+                listParticipantEnCours = listParticipantRandom;
+                context.setVariable("listParticipantRandom", listParticipantRandom);
             }
 
-            if(compteur > nbInscrits){
-                //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
-                numeroDeTable += 1;
-                compteur = 0;
+            int compteur = 0;
+            int numeroDeTable = 0;
+            for (Membre participantEnCours : listParticipantEnCours) {
+
+                if (compteur <= nbInscrits) {
+                    //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
+                }
+
+                if (compteur > nbInscrits) {
+                    //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
+                    numeroDeTable += 1;
+                    compteur = 0;
+                }
+                compteur++;
             }
-            compteur++;
         }
-
-
+*/
         /*
         Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
         context.setVariable("placesParTable",placesParTable);
@@ -112,6 +133,7 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         context.setVariable("placesParTable",placesParTable);
         */
 
+        templateEngine.process("/admin/tournoisAdmin", context, resp.getWriter());
     }
 
     /*

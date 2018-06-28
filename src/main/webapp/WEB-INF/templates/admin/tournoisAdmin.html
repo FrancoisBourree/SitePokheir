@@ -23,14 +23,19 @@
 <div th:replace="~{fragment::navbar}"></div>
 
 <!-- Container (About Section) -->
-<div class="w3-container w3-padding-64 w3-center" id="about">
+<div class="w3-container w3-padding-64 w3-center" id="TournoiAdminBlocGeneral" style="display: flex; flex-direction: column">
+
+    <div class="TournoiAdminBloc">
 
     <h3 style="text-decoration: underline">Tournoi en cours</h3>
     <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
 
     <p th:text="'Nombre de joueurs inscrits :   '+${nombreInscrits}"></p></br>
-    <p th:text="'Places par table :   '+${placesParTable}">0</p></br>
+    <p th:text="'Places par table :   '+${tournoiEnCours_placesTable}">0</p></br>
     <p th:text="'Tournoi en cours :   '+${tournoiEnCours_date}">0</p></br>
+        <p th:text="'Classé :   '+${tournoiEnCours_classe}">0</p></br>
+    <p th:text="'Nombre test :   '+${nbTest}">0</p></br>
+    <p th:text="'utilisateurConnecte :   '+${utilisateurConnecte}">0</p></br>
 
 
 <!-- Chrono -->
@@ -59,18 +64,22 @@
         </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Choisir" style="margin-bottom: 20px;width: 234px;"></br>
 
         -->
+    <h1>Paramétrage tournoi en cours</h1>
+    <form method="post" action="/tournoiEnCours">
 
-    <form method="post" action="/placesParTable">
-
-        <select id="w3-select" name="id-Tournoi">
+        <select id="w3-select" name="tournoiEnCours_date">
             <option> Selection du tournoi</option>
             <option name="option" th:each="tournoi : ${tournoiList}"
                     th:text="${tournoi.date}"
-                    th:value="${tournoi.idTournois}">
+                    th:value="${tournoi.date}">
             </option>
         </select></br>
 
-        <select name="placesParTable" class="w3-select" style="width: 10%;">
+
+        <input type="checkbox" name="tournoiEnCours_classe" value="tournoiEnCours_classe"> Classé ?<br>
+
+
+        <select name="tournoiEnCours_placesTable" class="w3-select" style="width: 10%;">
             <option> Places par table </option>
             <option> 5 </option>
             <option> 6 </option>
@@ -80,8 +89,10 @@
             <option> 10 </option>
         </select></br>
 
-        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Choisir" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Lancer le tournoi" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
+
+        <!--
 
     <form method="post" action="/tournoiEnCours">
 
@@ -94,8 +105,16 @@
             </option>
         </select></br>
 
+
+
         </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="Choisir ce tournoi" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
+
+    -->
+
+    </div>
+
+    <div class="TournoiAdminBloc">
 
     <form method="post" action="/addpoint">
         <div class="w3-content w3-container w3-white w3-center">
@@ -133,6 +152,8 @@
             <input class="w3-btn w3-green" type="submit" style="margin-top: 40px;" value="Ajouter"/></br>
         </div>
     </form>
+
+    </div>
 
 </div>
 
