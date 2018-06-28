@@ -58,7 +58,7 @@ public class MembreDaoImpl implements MembreDao{
     }
 
     public List<Membre> listParticipantRandom() {
-        String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' AND participe='1'";
+        String query = "SELECT * FROM membre WHERE NOT email='admin@hei.yncrea.fr' AND participe='1' ORDER BY RAND()";
         List<Membre> listofParticipantRandom = new ArrayList<>();
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();

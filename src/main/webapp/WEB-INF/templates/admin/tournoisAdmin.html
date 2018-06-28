@@ -29,13 +29,10 @@
 
     <h3 style="text-decoration: underline">Tournoi en cours</h3>
     <p>Vous trouverez ici toutes les infos concernant le tournoi</p>
-
-    <p th:text="'Nombre de joueurs inscrits :   '+${nombreInscrits}"></p></br>
-    <p th:text="'Places par table :   '+${tournoiEnCours_placesTable}">0</p></br>
-    <p th:text="'Tournoi en cours :   '+${tournoiEnCours_date}">0</p></br>
-        <p th:text="'Classé :   '+${tournoiEnCours_classe}">0</p></br>
-    <p th:text="'Nombre test :   '+${nbTest}">0</p></br>
-    <p th:text="'utilisateurConnecte :   '+${utilisateurConnecte}">0</p></br>
+    <p th:text="'Tournoi en cours :   '+${tournoiEnCours_date}">0</p>
+    <p th:text="'Nombre de joueurs inscrits :   '+${nombreInscrits}"></p>
+    <p th:text="'Places par table :   '+${tournoiEnCours_placesTable}">0</p>
+    <p th:text="'Classé :   '+${tournoiEnCours_classe}">0</p></br>
 
 
 <!-- Chrono -->
@@ -76,7 +73,7 @@
         </select></br>
 
 
-        <input type="checkbox" name="tournoiEnCours_classe" value="tournoiEnCours_classe"> Classé ?<br>
+        <input type="checkbox" name="tournoiEnCours_classe" value="true"> Classé ?<br>
 
 
         <select name="tournoiEnCours_placesTable" class="w3-select" style="width: 10%;">
@@ -131,14 +128,6 @@
             -->
 
             <h1 class="w3-black w3-center w3-round-xlarge"> Ajouter des points </h1>
-            <select class="selection w3-select" name="emailParticipant" style="width: 60%;margin-top: 20px">
-                <option > Participants </option>
-                <option name="option3" th:each="membre : ${tournoiParticipantClasse}"
-                        th:text="${membre.prenom}+' '+${membre.nom}+' '+'('+${membre.email}+')'"
-                        th:value="${membre.email}">
-                </option>
-            </select></br>
-
 
             <select class="selection w3-select" name="emailParticipant" style="width: 60%;margin-top: 20px">
             <option > Participants </option>
