@@ -38,8 +38,8 @@
       <file leaf-file-name="tournoisAdmin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/tournoisAdmin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+            <state relative-caret-position="311">
+              <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,65 +50,90 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tournoi2Servlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/Tournoi2Servlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <element signature="e#960#990#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TournoiServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/TournoiServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="e#961#991#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tournois.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/nonConnecte/tournois.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tournois2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/tournois2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="34" column="105" lean-forward="true" selection-start-line="34" selection-start-column="105" selection-end-line="34" selection-end-column="105" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TournoiAdminServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="974">
-              <caret line="83" column="14" lean-forward="true" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+            <state relative-caret-position="324">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Membre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/entities/Membre.java">
+      <file leaf-file-name="compte.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="352">
+              <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#form#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompteServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/CompteServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MembreLibrary.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/managers/MembreLibrary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#217#218#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="class#MembreLibraryHolder#0;class#MembreLibrary#0" expanded="false" />
+                <element signature="method#getInstance#0;class#MembreLibrary#0" expanded="false" />
+                <element signature="method#addMembre#0;class#MembreLibrary#0" expanded="false" />
+                <element signature="method#deleteMembre#0;class#MembreLibrary#0" expanded="false" />
+                <element signature="method#addPoint#0;class#MembreLibrary#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MembreDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/MembreDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnexionServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InscriptionTournoiServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/InscriptionTournoiServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -117,8 +142,8 @@
       <file leaf-file-name="MembreDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/impl/MembreDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2983">
-              <caret line="188" column="5" lean-forward="true" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
+            <state relative-caret-position="324">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <marker date="1530294469339" expanded="true" signature="285:328" ph="SELECT * FRO... membre" />
                 <marker date="1530294469339" expanded="true" signature="1400:1499" ph="SELECT * FRO... membre" />
@@ -133,28 +158,6 @@
                 <marker date="1530294469339" expanded="true" signature="7773:7818" ph="UPDATE membre... " />
                 <marker date="1530294469339" expanded="true" signature="8264:8345" ph="UPDATE membre... " />
                 <marker date="1530294469339" expanded="true" signature="9044:9117" ph="Select count... membre" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddPointsServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddPointsServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnexionServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -237,8 +240,6 @@
         <option value="$PROJECT_DIR$/src/main/java/devweb/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/CompteAdminServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/DeleteArticleServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html" />
-        <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/CompteServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/DesinscriptionTournoiServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/services/MembreService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Tournois.sql" />
@@ -247,7 +248,6 @@
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/admin/ChoixTournoiServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/compteadmin.html" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/entities/Tournoi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/devweb/managers/MembreLibrary.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/dao/MembreDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/javascript/chrono.js" />
         <option value="$PROJECT_DIR$/src/test/java/impl/MembreDaoTestCase.java" />
@@ -268,6 +268,9 @@
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/Tournoi2Servlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/TournoiServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/nonConnecte/tournois.html" />
+        <option value="$PROJECT_DIR$/src/main/java/devweb/managers/MembreLibrary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/CompteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html" />
       </list>
     </option>
   </component>
@@ -298,7 +301,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="552" />
     <option name="y" value="-20" />
     <option name="width" value="997" />
@@ -1000,7 +1003,7 @@
       <workItem from="1529947167447" duration="4327000" />
       <workItem from="1530030302901" duration="225000" />
       <workItem from="1530030903991" duration="12429000" />
-      <workItem from="1530118584015" duration="25239000" />
+      <workItem from="1530118584015" duration="28663000" />
     </task>
     <servers />
   </component>
@@ -1037,7 +1040,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445125000" />
+    <option name="totallyTimeSpent" value="448549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1049,7 +1052,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1108,13 +1111,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/filtres/AuthentificationAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/nonConnecte/classement.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1161,23 +1157,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="46" column="35" lean-forward="true" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="45" lean-forward="true" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/CompteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,13 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/compteadmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/DeleteTournoiServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1325,29 +1298,6 @@
             <marker date="1523554597213" expanded="true" signature="1470:1527" ph="INSERT INTO articles... " />
             <marker date="1523554597213" expanded="true" signature="2045:2083" ph="DELETE FROM articles... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/managers/MembreLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="class#MembreLibraryHolder#0;class#MembreLibrary#0" expanded="false" />
-            <element signature="method#getInstance#0;class#MembreLibrary#0" expanded="false" />
-            <element signature="method#addMembre#0;class#MembreLibrary#0" expanded="false" />
-            <element signature="method#getMdp#0;class#MembreLibrary#0" expanded="false" />
-            <element signature="method#deleteMembre#0;class#MembreLibrary#0" expanded="false" />
-            <element signature="method#addPoint#0;class#MembreLibrary#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/MembreDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,75 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddPointsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/impl/MembreDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2983">
-          <caret line="188" column="5" lean-forward="true" selection-start-line="188" selection-start-column="5" selection-end-line="188" selection-end-column="5" />
-          <folding>
-            <marker date="1530294469339" expanded="true" signature="285:328" ph="SELECT * FRO... membre" />
-            <marker date="1530294469339" expanded="true" signature="1400:1499" ph="SELECT * FRO... membre" />
-            <marker date="1530294469339" expanded="true" signature="2601:2677" ph="SELECT * FRO... membre" />
-            <marker date="1530294469339" expanded="true" signature="2601:2693" ph="SELECT * FRO... membre" />
-            <marker date="1530294469339" expanded="true" signature="3805:3839" ph="SELECT * FRO... membre" />
-            <marker date="1530294469339" expanded="true" signature="4928:5082" ph="INSERT INTO membre... " />
-            <marker date="1530294469339" expanded="true" signature="5671:5707" ph="SELECT mdp F... membre" />
-            <marker date="1530294469339" expanded="true" signature="6318:6350" ph="DELETE FROM membre... " />
-            <marker date="1530294469339" expanded="true" signature="6789:6826" ph="UPDATE membre... " />
-            <marker date="1530294469339" expanded="true" signature="7296:7341" ph="UPDATE membre... " />
-            <marker date="1530294469339" expanded="true" signature="7773:7818" ph="UPDATE membre... " />
-            <marker date="1530294469339" expanded="true" signature="8264:8345" ph="UPDATE membre... " />
-            <marker date="1530294469339" expanded="true" signature="9044:9117" ph="Select count... membre" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/entities/Membre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/tournoisAdmin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#form#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1530296145580" expanded="false" signature="4229:4262" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="46" column="29" lean-forward="true" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="974">
-          <caret line="83" column="14" lean-forward="true" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/Tournoi2Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1544,6 +1425,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/nonConnecte/tournois.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/tournois2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -1552,11 +1441,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/nonConnecte/tournois.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/AddPointsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="374">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/InscriptionTournoiServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/compteadmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/admin/tournoisAdmin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#form#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1530296145580" expanded="false" signature="4229:4262" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/nonConnecte/ConnexionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/entities/Membre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/impl/MembreDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <marker date="1530294469339" expanded="true" signature="285:328" ph="SELECT * FRO... membre" />
+            <marker date="1530294469339" expanded="true" signature="1400:1499" ph="SELECT * FRO... membre" />
+            <marker date="1530294469339" expanded="true" signature="2601:2677" ph="SELECT * FRO... membre" />
+            <marker date="1530294469339" expanded="true" signature="2601:2693" ph="SELECT * FRO... membre" />
+            <marker date="1530294469339" expanded="true" signature="3805:3839" ph="SELECT * FRO... membre" />
+            <marker date="1530294469339" expanded="true" signature="4928:5082" ph="INSERT INTO membre... " />
+            <marker date="1530294469339" expanded="true" signature="5671:5707" ph="SELECT mdp F... membre" />
+            <marker date="1530294469339" expanded="true" signature="6318:6350" ph="DELETE FROM membre... " />
+            <marker date="1530294469339" expanded="true" signature="6789:6826" ph="UPDATE membre... " />
+            <marker date="1530294469339" expanded="true" signature="7296:7341" ph="UPDATE membre... " />
+            <marker date="1530294469339" expanded="true" signature="7773:7818" ph="UPDATE membre... " />
+            <marker date="1530294469339" expanded="true" signature="8264:8345" ph="UPDATE membre... " />
+            <marker date="1530294469339" expanded="true" signature="9044:9117" ph="Select count... membre" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/dao/MembreDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/managers/MembreLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="class#MembreLibraryHolder#0;class#MembreLibrary#0" expanded="false" />
+            <element signature="method#getInstance#0;class#MembreLibrary#0" expanded="false" />
+            <element signature="method#addMembre#0;class#MembreLibrary#0" expanded="false" />
+            <element signature="method#deleteMembre#0;class#MembreLibrary#0" expanded="false" />
+            <element signature="method#addPoint#0;class#MembreLibrary#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/admin/TournoiAdminServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/devweb/servlets/connecte/CompteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/connecte/compte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

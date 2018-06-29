@@ -20,6 +20,10 @@ public class MembreLibrary {
         return membreDao.listParticipantClasse();
     }
 
+    public Membre getMembre(String email) {
+        return membreDao.getMembre(email);
+    }
+
     public int compterLesInscrits() {
         return membreDao.compterLesInscrits();
     }

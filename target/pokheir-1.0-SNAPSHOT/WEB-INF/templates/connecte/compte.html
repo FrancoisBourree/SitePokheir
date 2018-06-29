@@ -34,16 +34,10 @@
 
     <!-- Inscription tournoi -->
 
+    <p th:text="'Inscrit :   '+${inscription}">0</p></br>
+
     <form method="post" action="inscriretournoi">
-        <h3 class="w3-amber"> s'inscrire au prochain tournoi </h3></br>
-        <select id="w3-select" name="id-Tournoi">
-            <option> Selection du tournoi</option>
-            <option name="option" th:each="tournoi : ${tournoiList}"
-                    th:text="${tournoi.date}"
-                    th:value="${tournoi.idTournois}">
-            </option>
-        </select></br>
-        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="S'inscrire" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="S'inscrire au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
 
     <form method="post" action="/desinscriretournoi">
@@ -75,16 +69,10 @@
 
     <!-- Inscription tournoi -->
 
+    <p th:text="'Inscrit :   '+${inscription}">0</p></br>
+
     <form method="post" action="inscriretournoi">
-        <h3 class="w3-amber"> s'inscrire à un tournoi </h3></br>
-        <select id="w3-select" name="id-Tournoi">
-            <option> Selection du tournoi</option>
-            <option name="option" th:each="tournoi : ${tournoiList}"
-                    th:text="${tournoi.date}"
-                    th:value="${tournoi.idTournois}">
-            </option>
-        </select></br>
-        </br><input class="w3-btn w3-round w3-red w3-center" type="submit" value="S'inscrire" style="margin-bottom: 20px;width: 234px;"></br>
+        </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="S'inscrire au prochain tournoi" style="margin-bottom: 20px;width: 234px;"></br>
     </form>
 
     <form method="post" action="/desinscriretournoi">
