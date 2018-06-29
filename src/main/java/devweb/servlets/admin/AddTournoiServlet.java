@@ -26,7 +26,7 @@ public class AddTournoiServlet  extends HttpServlet { //crée une servlet generi
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String datetournoi = req.getParameter("datetournoi");
-        Boolean classe = Boolean.parseBoolean(req.getParameter("classe"));
+        Boolean classe = false;
         Integer nombreInscrits = 0;
         Integer placesTable = 0;
 
