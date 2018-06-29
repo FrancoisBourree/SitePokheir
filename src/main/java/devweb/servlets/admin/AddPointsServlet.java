@@ -16,7 +16,7 @@ public class AddPointsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String emailParticipant = req.getParameter("emailParticipant");
-        Integer points = Integer.parseInt(req.getParameter("points"));
+        Integer points = Integer.parseInt(req.getParameter("nbPoints"));
 
         try {
             MembreLibrary.getInstance().addPoint(emailParticipant,points);

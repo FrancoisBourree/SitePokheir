@@ -190,7 +190,7 @@ public class MembreDaoImpl implements MembreDao{
 
     @Override
     public void addPoint(String email, Integer nbpoint) {
-        String query = "UPDATE membre SET nbPoints=nbPoints+? WHERE email=?";
+        String query = "UPDATE membre SET nbPoints=nbPoints+?,partiesJouees=partiesJouees+1 WHERE email=?";
         try (
                 Connection connection = DataSourceProvider.getDataSource().getConnection();
                 PreparedStatement statement = connection.prepareStatement(query)) {
