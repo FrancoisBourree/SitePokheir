@@ -34,6 +34,11 @@
     <p th:text="'Places par table :   '+${tournoiEnCours_placesTable}">0</p>
     <p th:text="'Classé :   '+${tournoiEnCours_classe}">0</p></br>
 
+    <tr th:each="participantEnCours : ${listParticipantEnCours}">
+        <td th:text="${participantEnCours.prenom}"></td>
+        <td th:text="${participantEnCours.nom}"></td>
+        <td th:text="' - table :   '+${participantEnCours.numeroTable}"></td><br>
+    </tr>
 
 <!-- Chrono -->
 <h1>Chronomètre</h1>

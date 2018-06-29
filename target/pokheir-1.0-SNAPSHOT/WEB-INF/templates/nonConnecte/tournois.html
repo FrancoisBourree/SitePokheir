@@ -38,6 +38,12 @@
     </div>
 </div>
 
+<tr th:each="participantEnCours : ${listParticipantEnCours}">
+    <td th:text="${participantEnCours.prenom}"></td>
+    <td th:text="${participantEnCours.nom}"></td>
+    <td th:text="' - table :   '+${participantEnCours.numeroTable}"></td><br>
+</tr>
+
 <div th:replace="~{fragment::script}"></div>
 
 </body>

@@ -78,7 +78,7 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
         Boolean tournoiEnCours_classe = (Boolean) req.getSession().getAttribute("tournoiEnCours_classe");
         context.setVariable("tournoiEnCours_classe", tournoiEnCours_classe);
 
-
+        // SI TOURNOI EN COURS VALIDE
         if (tournoiEnCours_date != null && !tournoiEnCours_date.equals("")) {
 
             /*
@@ -99,31 +99,35 @@ public class TournoiAdminServlet extends GenericServlet { //crée une servlet ge
 
             List<Membre> listParticipantEnCours;
 
-            if (tournoiEnCours_classe) {
-                listParticipantEnCours = listParticipantClasse;
-                context.setVariable("listParticipantEnCours", listParticipantEnCours);
-            } else {
-                listParticipantEnCours = listParticipantRandom;
-                context.setVariable("listParticipantEnCours", listParticipantEnCours);
-            }
-            /*
+                    // CHOIX DU TYPE DE CLASSEMENT
+                    if (tournoiEnCours_classe) {
+                        listParticipantEnCours = listParticipantClasse;
+                        context.setVariable("listParticipantEnCours", listParticipantEnCours);
+                        req.getSession().setAttribute("listParticipantEnCours", listParticipantEnCours);
+                    } else {
+                        listParticipantEnCours = listParticipantRandom;
+                        context.setVariable("listParticipantEnCours", listParticipantEnCours);
+                        req.getSession().setAttribute("listParticipantEnCours", listParticipantEnCours);
+                    }
 
-            int compteur = 0;
-            int numeroDeTable = 0;
+
+            Integer compteur = 1;
+            Integer numeroDeTable = 1;
             for (Membre participantEnCours : listParticipantEnCours) {
 
-                if (compteur <= nbInscrits) {
+                if (compteur <= tournoiEnCours_placesTable) {
+                    participantEnCours.setNumeroTable(numeroDeTable);
                     //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
                 }
 
-                if (compteur > nbInscrits) {
+                if (compteur > tournoiEnCours_placesTable) {
                     //créer une fonction qui fait une requête SQL UPDATE du numéro de table du joueur
                     numeroDeTable += 1;
-                    compteur = 0;
+                    participantEnCours.setNumeroTable(numeroDeTable);
+                    compteur = 1;
                 }
                 compteur++;
             }
-        }
 
         /*
         Integer placesParTable = (Integer) req.getSession().getAttribute("placesParTable");
