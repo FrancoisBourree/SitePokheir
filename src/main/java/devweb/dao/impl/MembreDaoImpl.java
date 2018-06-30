@@ -189,6 +189,18 @@ public class MembreDaoImpl implements MembreDao{
     }
 
     @Override
+    public void desinscrireTous() {
+        String query = "UPDATE membre SET participe='0'";
+        try {
+            Connection connection = DataSourceProvider.getDataSource().getConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     public void addPoint(String email, Integer nbpoint) {
         String query = "UPDATE membre SET nbPoints=nbPoints+?,partiesJouees=partiesJouees+1 WHERE email=?";
         try (

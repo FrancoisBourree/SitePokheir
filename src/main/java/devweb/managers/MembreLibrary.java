@@ -70,6 +70,10 @@ public class MembreLibrary {
         membreDao.desinscrire(email);
     }
 
+    public void desinscrireTous(){
+        membreDao.desinscrireTous();
+    }
+
     public void addPoint(String email, Integer nbPoints){
 
         membreDao.addPoint(email,nbPoints);

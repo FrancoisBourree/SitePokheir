@@ -40,4 +40,7 @@ public interface MembreDao {
     public void inscrire(String email);
 
     public void desinscrire(String email);
+
+    public  void desinscrireTous();
 }
+
