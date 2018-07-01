@@ -29,22 +29,31 @@
     <div class="w3-row"> </div>
 </div>
 
-<div class="w3-row-padding w3-center">
-    <div class="w3-col m3 w3-content" style="margin-bottom: 50px;" th:each="tournoi : ${tournois}">
-        <h3 th:text="${tournoi.date}">Date 1</h3>
-        <div class="w3-col m3 w3-content" style="margin-bottom: 50px;" th:each="membre : ${membresList}">
-            <p th:text="${membre.nom}">participant</p><br>
-        </div>
+<div class="w3-container w3-padding-64 w3-center" id="TournoiAdminBlocGeneral" style="display: flex; flex-direction: row; justify-content: space-between">
+
+    <div class="w3-container w3-padding-64 w3-center" id="TournoiAdminBlocl" style="display: flex; flex-direction: column; border-style: double">
+
+        <h2>Organisation du tournoi en cours</h2>
+        <tr th:each="participantEnCours : ${listParticipantEnCours}">
+            <td th:text="${participantEnCours.prenom}"></td>
+            <td th:text="${participantEnCours.nom}"></td>
+            <td th:text="' - table :   '+${participantEnCours.numeroTable}"></td><br>
+        </tr>
+
     </div>
+
+    <div class="w3-container w3-padding-64 w3-center" id="TournoiAdminBloc2" style="display: flex; flex-direction: column; border-style: double">
+
+        <h2>Planning des prochains tournois</h2>
+            <div class="w3-row-padding w3-center">
+                <div class="w3-col m3 w3-content" style="margin-bottom: 50px;" th:each="tournoi : ${tournois}">
+                    <h3 th:text="${tournoi.date}">Date 1</h3>
+                </div>
+            </div>
+
+    </div>
+
 </div>
-
-<tr th:each="participantEnCours : ${listParticipantEnCours}">
-    <td th:text="${participantEnCours.prenom}"></td>
-    <td th:text="${participantEnCours.nom}"></td>
-    <td th:text="' - table :   '+${participantEnCours.numeroTable}"></td><br>
-</tr>
-
-
 
 <div th:replace="~{fragment::script}"></div>
 
