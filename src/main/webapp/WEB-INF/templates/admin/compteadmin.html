@@ -32,9 +32,7 @@
     <form method="post" action="addtournoi" >
 
         <p>Date :</p>
-        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;"></br>
-
-        <p>Classe : <input type="radio" name="classe" value="true" /></p>
+        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;" required></br>
 
         </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Créer un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
@@ -43,7 +41,6 @@
     <form method="post" action="deltournoi">
         <h3 class="w3-amber"> Suppression de tournoi </h3></br>
         <select id="w3-select" name="id-Tournoi">
-            <option> Selection du tournoi à supprimer</option>
             <option name="option" th:each="tournoi : ${tournoiList}"
                     th:text="${tournoi.date}"
                     th:value="${tournoi.idTournois}">
@@ -70,7 +67,7 @@
     <form method="post" action="addtournoi">
 
         <p>Date :</p>
-        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;"></br>
+        <input class="w3-border w3-input" type="date" name="datetournoi" style="width:100%;" required></br>
 
         </br><input class="w3-btn w3-round w3-green w3-center" type="submit" value="Créer un tournoi" style="margin-bottom: 20px;width: 234px;"></br>
         </br>
@@ -79,7 +76,6 @@
     <form method="post" action="deltournoi">
         <h3 class="w3-amber"> Suppression de tournoi </h3></br>
         <select id="w3-select" name="id-Tournoi">
-            <option> Selection du tournoi à supprimer</option>
             <option name="option" th:each="tournoi : ${tournoiList}"
                     th:text="${tournoi.date}"
                     th:value="${tournoi.idTournois}">
