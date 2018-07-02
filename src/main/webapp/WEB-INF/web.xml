@@ -63,8 +63,19 @@
     <filter-mapping>
         <filter-name>FilterAdmin</filter-name>
         <url-pattern>/admin/*</url-pattern>
+        <url-pattern>/compteadmin</url-pattern>
+        <url-pattern>/placesParTable</url-pattern>
+        <url-pattern>/addpoint</url-pattern>
+        <url-pattern>/addarticle</url-pattern>
+        <url-pattern>/choixTournoi</url-pattern>
+        <url-pattern>/addtournoi</url-pattern>
+        <url-pattern>/tournoiEnCours</url-pattern>
+        <url-pattern>/tournoisAdmin</url-pattern>
+        <url-pattern>/delarticle</url-pattern>
+        <url-pattern>/delcompte</url-pattern>
+        <url-pattern>/deltournoi</url-pattern>
+        <url-pattern>/finTournoi</url-pattern>
         <url-pattern>/accueiladmin</url-pattern>
-
     </filter-mapping>
 
 

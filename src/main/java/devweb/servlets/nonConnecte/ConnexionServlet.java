@@ -52,7 +52,7 @@ public class ConnexionServlet extends GenericServlet { //crée une servlet gener
             req.getSession().setAttribute("utilisateurConnecte",email); // enregistre "email" sous le nom "utilisateurConnecte" pour la session
             resp.sendRedirect("accueil2"); // on redirige vers la servlet : accueil2 (accueil pour connectés)
         } else{
-            resp.sendRedirect("compte"); // sinon on le redirige vers la servlet : compte
+            resp.sendRedirect("login"); // sinon on le redirige vers la servlet : login
         }
 
     }

@@ -1,5 +1,7 @@
 package devweb.filtres;
 
+import devweb.managers.MembreLibrary;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +22,7 @@ public class FilterAdmin implements Filter{
         String mdp = (String) httpRequest.getSession().getAttribute("mdp"); // récupère "mdp" de la session sous le nom "mdp"
         HttpServletResponse httpResponse = (HttpServletResponse) response;
 
-        if(!identifiant.equals("admin@hei.yncrea.fr") && !mdp.equals("pokheir2018")){ // si pas admin
+        if(!identifiant.equals("admin@hei.yncrea.fr") && !mdp.equals(MembreLibrary.getInstance().getMdp("admin@hei.yncrea.fr"))){ // si pas admin
             System.out.println("Vous n'etes pas admin !");
             httpResponse.sendRedirect("../compte"); // renvoie vers compte
             return;
