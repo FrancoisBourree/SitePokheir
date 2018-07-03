@@ -26,7 +26,9 @@ public class ConnexionServlet extends GenericServlet { //crée une servlet gener
             TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
             templateEngine.process("nonConnecte/login", context, resp.getWriter());
         }else{
-            resp.sendRedirect("../compte"); // sinon on le redirige vers la servlet : compte
+            WebContext context = new WebContext(req, resp, req.getServletContext());
+            TemplateEngine templateEngine = createTemplateEngine(req.getServletContext());
+            templateEngine.process("nonConnecte/login", context, resp.getWriter()); // permet de renvoyer au login meme en cas de mdp vide (permet déconnexion si on rentre /login dans le navigateur)
         }
 
     }
@@ -45,13 +47,13 @@ public class ConnexionServlet extends GenericServlet { //crée une servlet gener
         String password1= MembreLibrary.getInstance().getMdp(email); // récupère "email" de la base de données
 
         if (password1==null){
-            password1="";
+            mdp="";
         }
 
-        if (password1.equals(mdp)) { // si les mdp session correspond à celui de la bdd
+        if (password1.equals(mdp)){ // si les mdp session correspond à celui de la bdd
             req.getSession().setAttribute("utilisateurConnecte",email); // enregistre "email" sous le nom "utilisateurConnecte" pour la session
             resp.sendRedirect("accueil2"); // on redirige vers la servlet : accueil2 (accueil pour connectés)
-        } else{
+        }else{
             resp.sendRedirect("login"); // sinon on le redirige vers la servlet : login
         }
 

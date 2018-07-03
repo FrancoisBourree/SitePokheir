@@ -22,7 +22,6 @@
         <url-pattern>/addtounoi</url-pattern>
         <url-pattern>/compteadmin</url-pattern>
         <url-pattern>/delarticle</url-pattern>
-        <url-pattern>/delcompte</url-pattern>
         <url-pattern>/deltournoi</url-pattern>
         <url-pattern>/tournoisAdmin</url-pattern>
         <url-pattern>/connecte/*</url-pattern>
@@ -32,6 +31,7 @@
         <url-pattern>/modifmdp</url-pattern>
         <url-pattern>/tournois2</url-pattern>
         <url-pattern>/deconnexion</url-pattern>
+        <url-pattern>/delcompte</url-pattern>
     </filter-mapping>
 
     <!-- 2ème filtre : caracteres en UTF-8 -->
@@ -72,7 +72,6 @@
         <url-pattern>/tournoiEnCours</url-pattern>
         <url-pattern>/tournoisAdmin</url-pattern>
         <url-pattern>/delarticle</url-pattern>
-        <url-pattern>/delcompte</url-pattern>
         <url-pattern>/deltournoi</url-pattern>
         <url-pattern>/finTournoi</url-pattern>
         <url-pattern>/accueiladmin</url-pattern>
